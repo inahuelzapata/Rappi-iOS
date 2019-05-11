@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13C9185CDCE5CF5A07332AD0 /* Pods_Rappi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A201B2B15B4CE2C41AFD98F /* Pods_Rappi.framework */; };
 		2AF147DE22872C7800AF68A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF147DD22872C7800AF68A6 /* AppDelegate.swift */; };
 		2AF147E022872C7800AF68A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF147DF22872C7800AF68A6 /* ViewController.swift */; };
 		2AF147E322872C7800AF68A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF147E122872C7800AF68A6 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		2AF147E822872C7A00AF68A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AF147E722872C7A00AF68A6 /* Assets.xcassets */; };
 		2AF147EB22872C7A00AF68A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF147E922872C7A00AF68A6 /* LaunchScreen.storyboard */; };
 		2AF147F622872C7A00AF68A6 /* RappiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF147F522872C7A00AF68A6 /* RappiTests.swift */; };
+		4E53600EC7017C061A98EFDE /* Pods_RappiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AD2BD91D350867BCB61471 /* Pods_RappiTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08AD2BD91D350867BCB61471 /* Pods_RappiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RappiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF147DA22872C7800AF68A6 /* Rappi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rappi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF147DD22872C7800AF68A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AF147DF22872C7800AF68A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +41,11 @@
 		2AF147F122872C7A00AF68A6 /* RappiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RappiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF147F522872C7A00AF68A6 /* RappiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RappiTests.swift; sourceTree = "<group>"; };
 		2AF147F722872C7A00AF68A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40CB48E7B3C95F7BDDBC2A99 /* Pods-Rappi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rappi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rappi/Pods-Rappi.debug.xcconfig"; sourceTree = "<group>"; };
+		53923A1EF346963DB260E843 /* Pods-RappiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RappiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RappiTests/Pods-RappiTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A201B2B15B4CE2C41AFD98F /* Pods_Rappi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rappi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3DD5860D765E2E660D93BA1 /* Pods-Rappi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rappi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rappi/Pods-Rappi.release.xcconfig"; sourceTree = "<group>"; };
+		BACA69BBE9DAE2649F80756A /* Pods-RappiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RappiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RappiTests/Pods-RappiTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C9185CDCE5CF5A07332AD0 /* Pods_Rappi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E53600EC7017C061A98EFDE /* Pods_RappiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01DB5F2044C079F0BA2D5BAF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40CB48E7B3C95F7BDDBC2A99 /* Pods-Rappi.debug.xcconfig */,
+				B3DD5860D765E2E660D93BA1 /* Pods-Rappi.release.xcconfig */,
+				BACA69BBE9DAE2649F80756A /* Pods-RappiTests.debug.xcconfig */,
+				53923A1EF346963DB260E843 /* Pods-RappiTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2AF147D122872C7800AF68A6 = {
 			isa = PBXGroup;
 			children = (
 				2AF147DC22872C7800AF68A6 /* Rappi */,
 				2AF147F422872C7A00AF68A6 /* RappiTests */,
 				2AF147DB22872C7800AF68A6 /* Products */,
+				01DB5F2044C079F0BA2D5BAF /* Pods */,
+				F310BBCA8215890CFACF3734 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +122,15 @@
 			path = RappiTests;
 			sourceTree = "<group>";
 		};
+		F310BBCA8215890CFACF3734 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A201B2B15B4CE2C41AFD98F /* Pods_Rappi.framework */,
+				08AD2BD91D350867BCB61471 /* Pods_RappiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,10 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AF147FA22872C7A00AF68A6 /* Build configuration list for PBXNativeTarget "Rappi" */;
 			buildPhases = (
+				C3627A6047C15D7006EF5DF2 /* [CP] Check Pods Manifest.lock */,
 				2AF147D622872C7800AF68A6 /* Sources */,
 				2AF147D722872C7800AF68A6 /* Frameworks */,
 				2AF147D822872C7800AF68A6 /* Resources */,
 				2AF1480022872E1B00AF68A6 /* SwiftLint */,
+				B283ADEE4137878AC29A2D39 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AF147FD22872C7A00AF68A6 /* Build configuration list for PBXNativeTarget "RappiTests" */;
 			buildPhases = (
+				A073F3931946C4E26747FF92 /* [CP] Check Pods Manifest.lock */,
 				2AF147ED22872C7A00AF68A6 /* Sources */,
 				2AF147EE22872C7A00AF68A6 /* Frameworks */,
 				2AF147EF22872C7A00AF68A6 /* Resources */,
@@ -214,6 +249,74 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"Warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		A073F3931946C4E26747FF92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RappiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B283ADEE4137878AC29A2D39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rappi/Pods-Rappi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Tagged/Tagged.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tagged.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rappi/Pods-Rappi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3627A6047C15D7006EF5DF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rappi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -384,6 +487,7 @@
 		};
 		2AF147FB22872C7A00AF68A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40CB48E7B3C95F7BDDBC2A99 /* Pods-Rappi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -402,6 +506,7 @@
 		};
 		2AF147FC22872C7A00AF68A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3DD5860D765E2E660D93BA1 /* Pods-Rappi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -420,6 +525,7 @@
 		};
 		2AF147FE22872C7A00AF68A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BACA69BBE9DAE2649F80756A /* Pods-RappiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -441,6 +547,7 @@
 		};
 		2AF147FF22872C7A00AF68A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53923A1EF346963DB260E843 /* Pods-RappiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
