@@ -15,6 +15,9 @@
 		2A109C9222889A6100361798 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109C9122889A6100361798 /* HTTPResponse.swift */; };
 		2A109C9522889B0F00361798 /* Data+EncodeDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109C9422889B0F00361798 /* Data+EncodeDict.swift */; };
 		2A109C9822889C2C00361798 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109C9722889C2C00361798 /* OSLog.swift */; };
+		2A109C9F2288A1B400361798 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109C9E2288A1B400361798 /* MovieViewController.swift */; };
+		2A109CA72288A9EB00361798 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CA62288A9EB00361798 /* SerieViewController.swift */; };
+		2A109CAB2288AE5A00361798 /* LargeTitlesNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CAA2288AE5A00361798 /* LargeTitlesNavigation.swift */; };
 		2A37BB2D22873C3000DF532C /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37BB2C22873C3000DF532C /* Collection+Extension.swift */; };
 		2AF147DE22872C7800AF68A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF147DD22872C7800AF68A6 /* AppDelegate.swift */; };
 		2AF147E322872C7800AF68A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF147E122872C7800AF68A6 /* Main.storyboard */; };
@@ -62,6 +65,9 @@
 		2A109C9122889A6100361798 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
 		2A109C9422889B0F00361798 /* Data+EncodeDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+EncodeDict.swift"; sourceTree = "<group>"; };
 		2A109C9722889C2C00361798 /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
+		2A109C9E2288A1B400361798 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		2A109CA62288A9EB00361798 /* SerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
+		2A109CAA2288AE5A00361798 /* LargeTitlesNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTitlesNavigation.swift; sourceTree = "<group>"; };
 		2A37BB2C22873C3000DF532C /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		2AF147DA22872C7800AF68A6 /* Rappi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rappi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF147DD22872C7800AF68A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +178,110 @@
 			path = OSLog;
 			sourceTree = "<group>";
 		};
+		2A109C992288A16C00361798 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				2A109C9B2288A18900361798 /* Business */,
+				2A109C9C2288A19900361798 /* Display */,
+				2A109C9D2288A1A100361798 /* Presenter */,
+				2A109C9A2288A17600361798 /* Provider */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		2A109C9A2288A17600361798 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		2A109C9B2288A18900361798 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		2A109C9C2288A19900361798 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				2A109C9E2288A1B400361798 /* MovieViewController.swift */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		2A109C9D2288A1A100361798 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2A109CA02288A77700361798 /* Serie */ = {
+			isa = PBXGroup;
+			children = (
+				2A109CA52288A7A700361798 /* Business */,
+				2A109CA32288A79A00361798 /* Display */,
+				2A109CA12288A78C00361798 /* Presenter */,
+				2A109CA42288A7A200361798 /* Provider */,
+				2A109CA22288A79300361798 /* ViewModel */,
+			);
+			path = Serie;
+			sourceTree = "<group>";
+		};
+		2A109CA12288A78C00361798 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2A109CA22288A79300361798 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2A109CA32288A79A00361798 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				2A109CA62288A9EB00361798 /* SerieViewController.swift */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		2A109CA42288A7A200361798 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		2A109CA52288A7A700361798 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		2A109CA82288AE3900361798 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2A109CA92288AE3E00361798 /* LargeTitleNavigation */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2A109CA92288AE3E00361798 /* LargeTitleNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				2A109CAA2288AE5A00361798 /* LargeTitlesNavigation.swift */,
+			);
+			path = LargeTitleNavigation;
+			sourceTree = "<group>";
+		};
 		2AF147D122872C7800AF68A6 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +340,7 @@
 		2AF148022287317C00AF68A6 /* CrossFunctional */ = {
 			isa = PBXGroup;
 			children = (
+				2A109CA82288AE3900361798 /* UI */,
 				2A109C9622889C2100361798 /* OSLog */,
 				2AF1481A2287395400AF68A6 /* Environment */,
 				2AF148182287394600AF68A6 /* Extensions */,
@@ -258,6 +369,8 @@
 		2AF14806228731D000AF68A6 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				2A109CA02288A77700361798 /* Serie */,
+				2A109C992288A16C00361798 /* Movie */,
 				2AF1482522873CE600AF68A6 /* Authentication */,
 			);
 			path = Feature;
@@ -574,6 +687,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rappi/Pods-Rappi-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/Tagged/Tagged.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -582,6 +696,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tagged.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,9 +741,11 @@
 				2AF14834228896C200AF68A6 /* HTTPRequestBuilder.swift in Sources */,
 				2AF1482F228895CD00AF68A6 /* HTTPRequest.swift in Sources */,
 				2AF1482922873F7200AF68A6 /* AuthenticationEndpoint.swift in Sources */,
+				2A109CA72288A9EB00361798 /* SerieViewController.swift in Sources */,
 				2A109C90228899DB00361798 /* JSONResponse.swift in Sources */,
 				2AF1480B2287327E00AF68A6 /* Endpoint.swift in Sources */,
 				2A109C892288991400361798 /* ResponseParser.swift in Sources */,
+				2A109CAB2288AE5A00361798 /* LargeTitlesNavigation.swift in Sources */,
 				2A109C8E228899CC00361798 /* NetworkingError.swift in Sources */,
 				2A109C8C2288996300361798 /* AlamofireResponseParser.swift in Sources */,
 				2AF1480D2287338200AF68A6 /* Movie.swift in Sources */,
@@ -636,6 +753,7 @@
 				2AF14814228734B400AF68A6 /* ResponseResult.swift in Sources */,
 				2AF147DE22872C7800AF68A6 /* AppDelegate.swift in Sources */,
 				2AF1481C2287396A00AF68A6 /* JSONDecoder+Extension.swift in Sources */,
+				2A109C9F2288A1B400361798 /* MovieViewController.swift in Sources */,
 				2A109C9822889C2C00361798 /* OSLog.swift in Sources */,
 				2AF14831228895DE00AF68A6 /* HTTPRequestable.swift in Sources */,
 				2AF14811228733F700AF68A6 /* Serie.swift in Sources */,

@@ -9,24 +9,28 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.8.4):
     - PromiseKit/CorePromise
+  - SkeletonView (1.5)
   - Tagged (0.4.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.8.2)
   - PromiseKit (= 6.8.4)
+  - SkeletonView
   - Tagged (~> 0.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - PromiseKit
+    - SkeletonView
     - Tagged
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
+  SkeletonView: 6cbb80f82f8bdee3f9093e2fa03b84819b4bd826
   Tagged: a6babffe08b180c499a7a422661621bd4f330840
 
-PODFILE CHECKSUM: 9e4de34d5368635f37a47c0401a15394588471d6
+PODFILE CHECKSUM: 69201220a692a34e58d1b388622d15c61dbf8c57
 
 COCOAPODS: 1.5.3

@@ -13,4 +13,28 @@ enum NetworkingError: Error {
     case unwrap
     case parsing
     case backend(statusCode: Int, model: [String: Any])
+    case statusCode(Int)
+}
+
+extension NetworkingError {
+    var content: [String: Any] {
+        if case let .backend(_, dict) = self {
+            return dict
+        }
+
+        return [:]
+    }
+
+    var statusCode: Int {
+        switch self {
+        case .statusCode(let statusCode):
+            return statusCode
+
+        case .backend(let statusCode, _):
+            return statusCode
+
+        default:
+            return 601
+        }
+    }
 }
