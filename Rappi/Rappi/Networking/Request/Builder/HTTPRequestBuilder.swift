@@ -17,6 +17,8 @@ protocol HTTPRequestBuildeable {
     func withHeaders(_ headers: [Headable]) -> HTTPRequestBuildeable
 
     func withDecodingStrategy(_ strategy: JSONDecoder.KeyDecodingStrategy) -> HTTPRequestBuildeable
+
+    func filter(byParams params: [String: Any]?) -> HTTPRequestBuildeable
 }
 
 class HTTPRequestBuilder: HTTPRequestBuildeable {
@@ -26,32 +28,42 @@ class HTTPRequestBuilder: HTTPRequestBuildeable {
 
     private var keyDecodingStrategy = JSONDecoder.KeyDecodingStrategy.useDefaultKeys
 
+    private var params: [String: Any] = [:]
+
     init() { }
 
     @discardableResult
-    public func build() -> HTTPRequestable {
+    func build() -> HTTPRequestable {
         return HTTPRequest(endpoint: endpoint,
                            headers: headers,
-                           decodingStrategy: keyDecodingStrategy)
+                           decodingStrategy: keyDecodingStrategy,
+                           params: params)
     }
 
     @discardableResult
-    public func consume(endpoint: Endpoint) -> HTTPRequestBuildeable {
+    func consume(endpoint: Endpoint) -> HTTPRequestBuildeable {
         self.endpoint = endpoint
 
         return self
     }
 
     @discardableResult
-    public func withHeaders(_ headers: [Headable]) -> HTTPRequestBuildeable {
+    func withHeaders(_ headers: [Headable]) -> HTTPRequestBuildeable {
         self.headers = headers
 
         return self
     }
 
     @discardableResult
-    public func withDecodingStrategy(_ strategy: JSONDecoder.KeyDecodingStrategy) -> HTTPRequestBuildeable {
+    func withDecodingStrategy(_ strategy: JSONDecoder.KeyDecodingStrategy) -> HTTPRequestBuildeable {
         self.keyDecodingStrategy = strategy
+
+        return self
+    }
+
+    @discardableResult
+    func filter(byParams params: [String: Any]?) -> HTTPRequestBuildeable {
+        self.params = params ?? [:]
 
         return self
     }

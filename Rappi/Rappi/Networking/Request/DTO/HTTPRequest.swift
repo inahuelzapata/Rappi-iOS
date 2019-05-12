@@ -16,11 +16,15 @@ struct HTTPRequest: HTTPRequestable {
 
     var keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy
 
+    var params: [String : Any]
+
     init(endpoint: Endpoint,
          headers: [Headable],
-         decodingStrategy: JSONDecoder.KeyDecodingStrategy) {
+         decodingStrategy: JSONDecoder.KeyDecodingStrategy,
+         params: [String : Any]) {
         self.endpoint = endpoint
         self.headers = headers
         self.keyDecodingStrategy = decodingStrategy
+        self.params = params
     }
 }

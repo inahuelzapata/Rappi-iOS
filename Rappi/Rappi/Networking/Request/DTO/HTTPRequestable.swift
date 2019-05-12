@@ -14,4 +14,6 @@ protocol HTTPRequestable {
     var headers: [Headable] { get set }
 
     var keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy { get set }
+
+    var params: [String: Any] { get set }
 }

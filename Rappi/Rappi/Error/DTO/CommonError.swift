@@ -13,4 +13,5 @@ enum CommonError: Error {
     case parsing
     case unknown
     case unwrap
+    case encoding
 }

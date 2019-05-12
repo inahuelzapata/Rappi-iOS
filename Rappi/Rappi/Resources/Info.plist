@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AccessToken</key>
+	<string>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMDc4OTRlZTkzOGI1NDcyODZkM2YzZDI5MjI3NWE4MSIsInN1YiI6IjVjZDZmZWE1OTI1MTQxMDZmYWNlZmFlNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Hke78z1CRDxxQ2zBbXsgrf6HD8ZKbgo11WRyBXcHQa8</string>
+	<key>BaseURL</key>
+	<string>https://api.themoviedb.org/4</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

@@ -16,12 +16,12 @@ class AlamofireRequestExecutor: RequestExecutor, HeaderComposer {
     let responseParser: ResponseParser
     let sessionManager: Alamofire.SessionManager
 
-    required init(parser: ResponseParser) {
-        self.responseParser = parser
+    required init(responseParser: ResponseParser) {
+        self.responseParser = responseParser
         self.sessionManager = .default
     }
 
-    required init(sessionManager: Alamofire.SessionManager = .default, responseParser: ResponseParser) {
+    init(responseParser: ResponseParser, sessionManager: Alamofire.SessionManager = .default) {
         self.responseParser = responseParser
         self.sessionManager = sessionManager
     }
@@ -44,7 +44,7 @@ class AlamofireRequestExecutor: RequestExecutor, HeaderComposer {
             return Promise<T> { seal in
                 sessionManager.request(request.endpoint.builtURL,
                                        method: request.endpoint.httpMethod.method,
-                                       parameters: [:], // TODO: Replace with params
+                                       parameters: request.params,
                                        encoding: JSONEncoding.default,
                                        headers: compose(headers: request.headers))
                     .validate()

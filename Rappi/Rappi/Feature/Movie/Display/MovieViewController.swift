@@ -8,15 +8,36 @@
 
 import Foundation
 import UIKit
+import PromiseKit
 
 class MovieViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
-
+    let accessTokenProvider: AccessTokenProvidable = AccessTokenProvider(requestProvider: currentNetworking.requestProvider,
+                                                                         requestBuilder: currentNetworking.requestBuilder)
+    let requestTokenProvider: RequestTokenProvidable = RequestTokenProvider(requestProvider: currentNetworking.requestProvider,
+                                                                            requestBuilder: currentNetworking.requestBuilder)
     override func viewDidLoad() {
         super.viewDidLoad()
 
         renderLargeNavigation()
         view.showAnimatedGradientSkeleton()
+
+        testNetworking()
+    }
+
+    func testNetworking() {
+        let dto = RequestTokenRequest(redirectTo: "thevegandeveloper.com")
+
+        do {
+            try self.requestTokenProvider.execute(request: dto)
+                .then { token in
+                    return try self.accessTokenProvider.execute(request: AccessTokenRequest(requestToken: token.requestToken.rawValue))
+                }.done { accessToken in
+                    print("✅ \(accessToken.accountId)")
+            }
+        } catch {
+
+        }
     }
 }
 

@@ -1,16 +1,16 @@
 //
-//  AuthorizationResponse.swift
+//  RequestTokenResponse.swift
 //  Rappi
 //
-//  Created by Nahuel Zapata on 5/11/19.
+//  Created by Nahuel Zapata on 5/12/19.
 //  Copyright © 2019 iNahuelZapata. All rights reserved.
 //
 
 import Foundation
 import Tagged
 
-struct Authentication {
-    typealias RequestToken = Tagged<Authentication, String>
+struct RequestTokenResponse {
+    typealias RequestToken = Tagged<RequestTokenResponse, String>
 
     let statusMessage: String
     let requestToken: RequestToken
@@ -18,4 +18,4 @@ struct Authentication {
     let statusCode: Int
 }
 
-extension Authentication: Decodable { }
+extension RequestTokenResponse: Decodable { }

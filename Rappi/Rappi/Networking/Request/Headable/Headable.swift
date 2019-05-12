@@ -15,6 +15,7 @@ protocol Headable {
 enum Header {
     case contentType(type: ContentType)
     case authentication(token: String)
+    case authorization(token: String)
 }
 
 extension Header: Headable {
@@ -25,26 +26,9 @@ extension Header: Headable {
 
         case .authentication(let token):
             return ["Authentication": token]
-        }
-    }
-}
 
-enum ContentType: String {
-    case applicationJson
-    case imagePng
-    case imageJpeg
-    case textPlain
-
-    var value: String {
-        switch self {
-        case .applicationJson:
-            return "application/json"
-        case .imagePng:
-            return "image/png"
-        case .imageJpeg:
-            return "image/jpeg"
-        case .textPlain:
-            return "text/plain"
+        case .authorization(let token):
+            return ["Authorization": "Bearer \(token)"]
         }
     }
 }

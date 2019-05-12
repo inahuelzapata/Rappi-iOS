@@ -10,7 +10,7 @@ import Alamofire
 import Foundation
 
 protocol RequestExecutor {
-    init(parser: ResponseParser)
+    init(responseParser: ResponseParser)
 
     func execute<T: Decodable>(request: HTTPRequestable, with expectedType: T.Type) -> HTTPResponse
 }
