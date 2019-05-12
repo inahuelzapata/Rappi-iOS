@@ -29,6 +29,9 @@
 		2A109CC32288BDE300361798 /* Encodable+ToDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CC22288BDE300361798 /* Encodable+ToDict.swift */; };
 		2A109CC52288BED200361798 /* AccessTokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CC42288BED200361798 /* AccessTokenProvider.swift */; };
 		2A109CC82288C03F00361798 /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CC72288C03F00361798 /* Current.swift */; };
+		2A109CCA2288C9B400361798 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CC92288C9B400361798 /* AuthorizationViewController.swift */; };
+		2A109CCD2288D46100361798 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CCC2288D46100361798 /* Account.swift */; };
+		2A109CD02288D54D00361798 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CCF2288D54D00361798 /* UserDefaults.swift */; };
 		2A37BB2D22873C3000DF532C /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37BB2C22873C3000DF532C /* Collection+Extension.swift */; };
 		2AF147DE22872C7800AF68A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF147DD22872C7800AF68A6 /* AppDelegate.swift */; };
 		2AF147E322872C7800AF68A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF147E122872C7800AF68A6 /* Main.storyboard */; };
@@ -89,6 +92,9 @@
 		2A109CC22288BDE300361798 /* Encodable+ToDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+ToDict.swift"; sourceTree = "<group>"; };
 		2A109CC42288BED200361798 /* AccessTokenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenProvider.swift; sourceTree = "<group>"; };
 		2A109CC72288C03F00361798 /* Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
+		2A109CC92288C9B400361798 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		2A109CCC2288D46100361798 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		2A109CCF2288D54D00361798 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		2A37BB2C22873C3000DF532C /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		2AF147DA22872C7800AF68A6 /* Rappi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rappi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF147DD22872C7800AF68A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -362,6 +368,22 @@
 			path = Current;
 			sourceTree = "<group>";
 		};
+		2A109CCB2288D45500361798 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				2A109CCC2288D46100361798 /* Account.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		2A109CCE2288D52700361798 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				2A109CCF2288D54D00361798 /* UserDefaults.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		2AF147D122872C7800AF68A6 = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +442,7 @@
 		2AF148022287317C00AF68A6 /* CrossFunctional */ = {
 			isa = PBXGroup;
 			children = (
+				2A109CCE2288D52700361798 /* UserDefaults */,
 				2A109CC62288C03300361798 /* Current */,
 				2AF1481A2287395400AF68A6 /* Environment */,
 				2AF148182287394600AF68A6 /* Extensions */,
@@ -432,6 +455,7 @@
 		2AF14804228731C100AF68A6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2A109CCB2288D45500361798 /* Account */,
 				2AF148122287349800AF68A6 /* Response */,
 				2AF1480E228733DB00AF68A6 /* Movie */,
 				2AF1480F228733EB00AF68A6 /* Serie */,
@@ -573,6 +597,7 @@
 				2A109CB42288BC4700361798 /* DTO */,
 				2A109CAC2288AF0B00361798 /* Provider */,
 				2AF1482822873F7200AF68A6 /* AuthenticationEndpoint.swift */,
+				2A109CC92288C9B400361798 /* AuthorizationViewController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -819,6 +844,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A109CCA2288C9B400361798 /* AuthorizationViewController.swift in Sources */,
 				2A109CBE2288BCAA00361798 /* RequestTokenResponse.swift in Sources */,
 				2AF1482C228894B200AF68A6 /* HTTPMethodAdapter.swift in Sources */,
 				2AF147E622872C7800AF68A6 /* Rappi.xcdatamodeld in Sources */,
@@ -843,6 +869,7 @@
 				2AF14814228734B400AF68A6 /* ResponseResult.swift in Sources */,
 				2AF147DE22872C7800AF68A6 /* AppDelegate.swift in Sources */,
 				2AF1481C2287396A00AF68A6 /* JSONDecoder+Extension.swift in Sources */,
+				2A109CCD2288D46100361798 /* Account.swift in Sources */,
 				2A109C9F2288A1B400361798 /* MovieViewController.swift in Sources */,
 				2A109CC82288C03F00361798 /* Current.swift in Sources */,
 				2A109C9822889C2C00361798 /* OSLog.swift in Sources */,
@@ -853,6 +880,7 @@
 				2A109C9522889B0F00361798 /* Data+EncodeDict.swift in Sources */,
 				2AF14839228897B200AF68A6 /* AlamofireRequestExecutor.swift in Sources */,
 				2A109CBA2288BC7300361798 /* AccessTokenResponse.swift in Sources */,
+				2A109CD02288D54D00361798 /* UserDefaults.swift in Sources */,
 				2AF148372288979600AF68A6 /* RequestExecutor.swift in Sources */,
 				2AF1483B2288986300AF68A6 /* Mockable.swift in Sources */,
 				2A109CBC2288BC9D00361798 /* RequestTokenRequest.swift in Sources */,

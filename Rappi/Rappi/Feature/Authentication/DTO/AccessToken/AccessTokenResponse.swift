@@ -13,10 +13,10 @@ struct AccessTokenResponse {
     typealias AccessToken = Tagged<AccessTokenResponse, String>
 
     let statusMessage: String
-    let requestToken: AccessToken
+    let accessToken: AccessToken
     let success: Bool
     let statusCode: Int
-    let accountId: String
+    let accountId: Account.AccountID
 }
 
 extension AccessTokenResponse: Decodable { }

@@ -15,5 +15,5 @@ protocol HTTPRequestable {
 
     var keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy { get set }
 
-    var params: [String: Any] { get set }
+    var params: [String: Any]? { get set }
 }

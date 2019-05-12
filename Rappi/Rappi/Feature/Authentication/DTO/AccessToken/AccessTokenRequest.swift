@@ -9,7 +9,7 @@
 import Foundation
 
 struct AccessTokenRequest {
-    let requestToken: String
+    let requestToken: RequestTokenResponse.RequestToken
 }
 
 extension AccessTokenRequest: Encodable { }
