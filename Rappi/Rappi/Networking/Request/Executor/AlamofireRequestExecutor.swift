@@ -12,23 +12,28 @@ import PromiseKit
 
 extension Data: JSONResponse { }
 
- class AlamofireRequestExecutor: RequestExecutor, HeaderComposer {
+class AlamofireRequestExecutor: RequestExecutor, HeaderComposer {
     let responseParser: ResponseParser
     let sessionManager: Alamofire.SessionManager
 
-    required  init(sessionManager: Alamofire.SessionManager = .default, responseParser: ResponseParser) {
+    required init(parser: ResponseParser) {
+        self.responseParser = parser
+        self.sessionManager = .default
+    }
+
+    required init(sessionManager: Alamofire.SessionManager = .default, responseParser: ResponseParser) {
         self.responseParser = responseParser
         self.sessionManager = sessionManager
     }
 
-     func execute<T: Decodable>(request: HTTPRequestable, with expectedType: T.Type) -> HTTPResponse {
+    func execute<T: Decodable>(request: HTTPRequestable, with expectedType: T.Type) -> HTTPResponse {
         switch request.endpoint.responseType {
         case .stub(let stubType):
             return Promise<T> { seal in
                 do {
                     let parsedResponse = try
-                        self.responseParser.parse(response: stubType.mockData, expectedType: T.self,
-                                                  decodingStrategy: request.keyDecodingStrategy)
+                    self.responseParser.parse(response: stubType.mockData, expectedType: T.self,
+                                              decodingStrategy: request.keyDecodingStrategy)
                     seal.fulfill(parsedResponse)
                 } catch {
                     seal.reject(error)
@@ -46,8 +51,8 @@ extension Data: JSONResponse { }
                     .responseJSON { response in
                         do {
                             let parsedResponse = try
-                                self.responseParser.parse(response: response, expectedType: T.self,
-                                                          decodingStrategy: request.keyDecodingStrategy)
+                            self.responseParser.parse(response: response, expectedType: T.self,
+                                                      decodingStrategy: request.keyDecodingStrategy)
                             seal.fulfill(parsedResponse)
                         } catch {
                             seal.reject(error)

@@ -52,6 +52,9 @@
                         <viewLayoutGuide key="safeArea" id="tEZ-Hw-tLe"/>
                     </view>
                     <navigationItem key="navigationItem" title="Series" id="O8O-Tq-D5a"/>
+                    <connections>
+                        <outlet property="collectionView" destination="8cs-xl-1lo" id="Zxq-om-nIO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLH-An-fgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,6 +102,9 @@
                         <viewLayoutGuide key="safeArea" id="7MT-NE-Iq8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="MN7-y2-fEj"/>
+                    <connections>
+                        <outlet property="collectionView" destination="0uT-1V-atB" id="exa-9L-fOx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSz-fx-V6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
