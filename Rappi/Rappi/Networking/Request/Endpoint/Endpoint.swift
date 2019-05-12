@@ -6,11 +6,10 @@
 //  Copyright © 2019 iNahuelZapata. All rights reserved.
 //
 
-import Alamofire
 import Foundation
 
 protocol Endpoint {
-    var httpMethod: HTTPMethod { get }
+    var httpMethod: HTTPSMethod { get }
 
     var path: String { get }
 
@@ -20,7 +19,11 @@ protocol Endpoint {
 }
 
 extension Endpoint {
-    var buildURL: String {
+    var builtURL: String {
         return baseURL + path
+    }
+
+    var baseURL: String {
+        return Environment().configuration(.serverURL)
     }
 }
