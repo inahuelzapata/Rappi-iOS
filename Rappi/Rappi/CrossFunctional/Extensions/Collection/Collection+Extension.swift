@@ -29,20 +29,3 @@ extension Collection {
         }
     }
 }
-
-extension Data {
-    func toJSON() -> NSString {
-        do {
-            if let jsonData = try JSONSerialization.jsonObject(with: self,
-                                                               options: [.allowFragments]) as? [String: Any] {
-                return jsonData.dictToJSON()
-            }
-            print("❌ Error while casting")
-            return "{ }"
-        } catch {
-            print("❌ Error while parsing: \(error)")
-
-            return "{ }"
-        }
-    }
-}

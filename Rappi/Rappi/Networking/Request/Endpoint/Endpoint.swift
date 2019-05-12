@@ -16,6 +16,13 @@ protocol Endpoint {
     var baseURL: String { get }
 
     var builtURL: String { get }
+
+    var responseType: ResponseType { get }
+}
+
+enum ResponseType {
+    case stub(Mockable)
+    case real
 }
 
 extension Endpoint {
@@ -25,5 +32,9 @@ extension Endpoint {
 
     var baseURL: String {
         return Environment().configuration(.serverURL)
+    }
+
+    var responseType: ResponseType {
+        return .real
     }
 }

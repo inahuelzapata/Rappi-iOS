@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		13C9185CDCE5CF5A07332AD0 /* Pods_Rappi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A201B2B15B4CE2C41AFD98F /* Pods_Rappi.framework */; };
+		2A109C892288991400361798 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109C882288991400361798 /* ResponseParser.swift */; };
+		2A109C8C2288996300361798 /* AlamofireResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109C8B2288996300361798 /* AlamofireResponseParser.swift */; };
+		2A109C8E228899CC00361798 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109C8D228899CC00361798 /* NetworkingError.swift */; };
+		2A109C90228899DB00361798 /* JSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109C8F228899DB00361798 /* JSONResponse.swift */; };
+		2A109C9222889A6100361798 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109C9122889A6100361798 /* HTTPResponse.swift */; };
+		2A109C9522889B0F00361798 /* Data+EncodeDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109C9422889B0F00361798 /* Data+EncodeDict.swift */; };
+		2A109C9822889C2C00361798 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109C9722889C2C00361798 /* OSLog.swift */; };
 		2A37BB2D22873C3000DF532C /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37BB2C22873C3000DF532C /* Collection+Extension.swift */; };
 		2AF147DE22872C7800AF68A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF147DD22872C7800AF68A6 /* AppDelegate.swift */; };
 		2AF147E322872C7800AF68A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF147E122872C7800AF68A6 /* Main.storyboard */; };
@@ -30,6 +37,9 @@
 		2AF1482F228895CD00AF68A6 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF1482E228895CD00AF68A6 /* HTTPRequest.swift */; };
 		2AF14831228895DE00AF68A6 /* HTTPRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF14830228895DE00AF68A6 /* HTTPRequestable.swift */; };
 		2AF14834228896C200AF68A6 /* HTTPRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF14833228896C200AF68A6 /* HTTPRequestBuilder.swift */; };
+		2AF148372288979600AF68A6 /* RequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF148362288979600AF68A6 /* RequestExecutor.swift */; };
+		2AF14839228897B200AF68A6 /* AlamofireRequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF14838228897B200AF68A6 /* AlamofireRequestExecutor.swift */; };
+		2AF1483B2288986300AF68A6 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF1483A2288986300AF68A6 /* Mockable.swift */; };
 		4E53600EC7017C061A98EFDE /* Pods_RappiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AD2BD91D350867BCB61471 /* Pods_RappiTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +55,13 @@
 
 /* Begin PBXFileReference section */
 		08AD2BD91D350867BCB61471 /* Pods_RappiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RappiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A109C882288991400361798 /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
+		2A109C8B2288996300361798 /* AlamofireResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireResponseParser.swift; sourceTree = "<group>"; };
+		2A109C8D228899CC00361798 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		2A109C8F228899DB00361798 /* JSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResponse.swift; sourceTree = "<group>"; };
+		2A109C9122889A6100361798 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
+		2A109C9422889B0F00361798 /* Data+EncodeDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+EncodeDict.swift"; sourceTree = "<group>"; };
+		2A109C9722889C2C00361798 /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
 		2A37BB2C22873C3000DF532C /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		2AF147DA22872C7800AF68A6 /* Rappi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rappi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF147DD22872C7800AF68A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +88,9 @@
 		2AF1482E228895CD00AF68A6 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		2AF14830228895DE00AF68A6 /* HTTPRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestable.swift; sourceTree = "<group>"; };
 		2AF14833228896C200AF68A6 /* HTTPRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestBuilder.swift; sourceTree = "<group>"; };
+		2AF148362288979600AF68A6 /* RequestExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecutor.swift; sourceTree = "<group>"; };
+		2AF14838228897B200AF68A6 /* AlamofireRequestExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRequestExecutor.swift; sourceTree = "<group>"; };
+		2AF1483A2288986300AF68A6 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		40CB48E7B3C95F7BDDBC2A99 /* Pods-Rappi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rappi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rappi/Pods-Rappi.debug.xcconfig"; sourceTree = "<group>"; };
 		53923A1EF346963DB260E843 /* Pods-RappiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RappiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RappiTests/Pods-RappiTests.release.xcconfig"; sourceTree = "<group>"; };
 		5A201B2B15B4CE2C41AFD98F /* Pods_Rappi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rappi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +127,49 @@
 				53923A1EF346963DB260E843 /* Pods-RappiTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2A109C86228898FD00361798 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				2A109C8A2288992000361798 /* DTO */,
+				2A109C872288990600361798 /* ResponseParser */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		2A109C872288990600361798 /* ResponseParser */ = {
+			isa = PBXGroup;
+			children = (
+				2A109C882288991400361798 /* ResponseParser.swift */,
+				2A109C8B2288996300361798 /* AlamofireResponseParser.swift */,
+			);
+			path = ResponseParser;
+			sourceTree = "<group>";
+		};
+		2A109C8A2288992000361798 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				2A109C8F228899DB00361798 /* JSONResponse.swift */,
+				2A109C9122889A6100361798 /* HTTPResponse.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		2A109C9322889B0000361798 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2A109C9422889B0F00361798 /* Data+EncodeDict.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2A109C9622889C2100361798 /* OSLog */ = {
+			isa = PBXGroup;
+			children = (
+				2A109C9722889C2C00361798 /* OSLog.swift */,
+			);
+			path = OSLog;
 			sourceTree = "<group>";
 		};
 		2AF147D122872C7800AF68A6 = {
@@ -167,6 +230,7 @@
 		2AF148022287317C00AF68A6 /* CrossFunctional */ = {
 			isa = PBXGroup;
 			children = (
+				2A109C9622889C2100361798 /* OSLog */,
 				2AF1481A2287395400AF68A6 /* Environment */,
 				2AF148182287394600AF68A6 /* Extensions */,
 			);
@@ -203,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				2AF148082287326D00AF68A6 /* Request */,
+				2A109C86228898FD00361798 /* Response */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -212,9 +277,10 @@
 			children = (
 				2AF148322288969B00AF68A6 /* Builder */,
 				2AF1482D228895BE00AF68A6 /* DTO */,
-				2AF1482A2288949900AF68A6 /* Utils */,
-				2AF1481F22873AD700AF68A6 /* Headable */,
 				2AF148092287327200AF68A6 /* Endpoint */,
+				2AF148352288977F00AF68A6 /* Executor */,
+				2AF1481F22873AD700AF68A6 /* Headable */,
+				2AF1482A2288949900AF68A6 /* Utils */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -255,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				2AF148162287392700AF68A6 /* CommonError.swift */,
+				2A109C8D228899CC00361798 /* NetworkingError.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -262,6 +329,7 @@
 		2AF148182287394600AF68A6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2A109C9322889B0000361798 /* Data */,
 				2AF1482422873BEA00AF68A6 /* Collection */,
 				2AF148192287394D00AF68A6 /* JSONDecoder */,
 			);
@@ -314,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				2AF1482B228894B200AF68A6 /* HTTPMethodAdapter.swift */,
+				2AF1483A2288986300AF68A6 /* Mockable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -333,6 +402,15 @@
 				2AF14833228896C200AF68A6 /* HTTPRequestBuilder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		2AF148352288977F00AF68A6 /* Executor */ = {
+			isa = PBXGroup;
+			children = (
+				2AF148362288979600AF68A6 /* RequestExecutor.swift */,
+				2AF14838228897B200AF68A6 /* AlamofireRequestExecutor.swift */,
+			);
+			path = Executor;
 			sourceTree = "<group>";
 		};
 		F310BBCA8215890CFACF3734 /* Frameworks */ = {
@@ -495,6 +573,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rappi/Pods-Rappi-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Tagged/Tagged.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -502,6 +581,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tagged.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,15 +626,25 @@
 				2AF14834228896C200AF68A6 /* HTTPRequestBuilder.swift in Sources */,
 				2AF1482F228895CD00AF68A6 /* HTTPRequest.swift in Sources */,
 				2AF1482922873F7200AF68A6 /* AuthenticationEndpoint.swift in Sources */,
+				2A109C90228899DB00361798 /* JSONResponse.swift in Sources */,
 				2AF1480B2287327E00AF68A6 /* Endpoint.swift in Sources */,
+				2A109C892288991400361798 /* ResponseParser.swift in Sources */,
+				2A109C8E228899CC00361798 /* NetworkingError.swift in Sources */,
+				2A109C8C2288996300361798 /* AlamofireResponseParser.swift in Sources */,
 				2AF1480D2287338200AF68A6 /* Movie.swift in Sources */,
 				2AF1481E228739BC00AF68A6 /* Environment.swift in Sources */,
 				2AF14814228734B400AF68A6 /* ResponseResult.swift in Sources */,
 				2AF147DE22872C7800AF68A6 /* AppDelegate.swift in Sources */,
 				2AF1481C2287396A00AF68A6 /* JSONDecoder+Extension.swift in Sources */,
+				2A109C9822889C2C00361798 /* OSLog.swift in Sources */,
 				2AF14831228895DE00AF68A6 /* HTTPRequestable.swift in Sources */,
 				2AF14811228733F700AF68A6 /* Serie.swift in Sources */,
 				2AF1482322873B0C00AF68A6 /* HeaderComposer.swift in Sources */,
+				2A109C9522889B0F00361798 /* Data+EncodeDict.swift in Sources */,
+				2AF14839228897B200AF68A6 /* AlamofireRequestExecutor.swift in Sources */,
+				2AF148372288979600AF68A6 /* RequestExecutor.swift in Sources */,
+				2AF1483B2288986300AF68A6 /* Mockable.swift in Sources */,
+				2A109C9222889A6100361798 /* HTTPResponse.swift in Sources */,
 				2AF1482122873AE600AF68A6 /* Headable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

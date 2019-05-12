@@ -12,4 +12,5 @@ enum CommonError: Error {
     case casting
     case parsing
     case unknown
+    case unwrap
 }

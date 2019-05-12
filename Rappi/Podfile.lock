@@ -1,20 +1,32 @@
 PODS:
   - Alamofire (4.8.2)
+  - PromiseKit (6.8.4):
+    - PromiseKit/CorePromise (= 6.8.4)
+    - PromiseKit/Foundation (= 6.8.4)
+    - PromiseKit/UIKit (= 6.8.4)
+  - PromiseKit/CorePromise (6.8.4)
+  - PromiseKit/Foundation (6.8.4):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.8.4):
+    - PromiseKit/CorePromise
   - Tagged (0.4.0)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (= 4.8.2)
+  - PromiseKit (= 6.8.4)
   - Tagged (~> 0.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - PromiseKit
     - Tagged
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
   Tagged: a6babffe08b180c499a7a422661621bd4f330840
 
-PODFILE CHECKSUM: 5b94bc93b394146ff0852ebdef0a0f4bcce04843
+PODFILE CHECKSUM: 9e4de34d5368635f37a47c0401a15394588471d6
 
 COCOAPODS: 1.5.3
