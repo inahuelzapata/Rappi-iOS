@@ -19,11 +19,12 @@ protocol Navigator: StoryboardInitiable {
                                        with navigationStrategy: NavigationStrategy,
                                        completion: @escaping () -> Void)
 
-    func createViewController<T: DataStorage>(with requiredStore: RequiredStorage<T>) throws -> UIViewController
-
     func navigateToViewController<T: UIViewController, U: DataStorage>(from source: T?,
                                                                        initStore: RequiredStorage<U>,
                                                                        with navigationStrategy: NavigationStrategy)
+
+    func createStorableViewController<T: DataStorage>(_ initStore: RequiredStorage<T>)
+        throws -> UIViewController
 }
 
 extension Navigator {
@@ -65,7 +66,7 @@ extension Navigator {
                                         with navigationStrategy: NavigationStrategy)
     where T: UIViewController, U: DataStorage {
         do {
-            let destinationController = try createViewController(with: initStore)
+            let destinationController = try createViewController(initStore)
             navigate(from: source, to: destinationController, with: navigationStrategy)
         } catch {
             assertionFailure("Controller with identifier \(initStore.controllerIdentifier) can't be created")

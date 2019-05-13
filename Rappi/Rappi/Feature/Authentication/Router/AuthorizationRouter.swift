@@ -8,10 +8,10 @@
 
 import Foundation
 
-protocol AuthorizationRoutingLogic {
+protocol AuthorizationRoutingLogic: Navigator {
     init(controller: AuthorizationViewController?)
 
-    func routeToFeed()
+    func routeToFeed(accountID: String)
 }
 
 class AuthorizationRouter: AuthorizationRoutingLogic {
@@ -21,7 +21,13 @@ class AuthorizationRouter: AuthorizationRoutingLogic {
         self.controller = controller
     }
 
-    func routeToFeed() {
+    func routeToFeed(accountID: String) {
+        do {
+            let destinationController = try initStoryboardInitialViewController(with: FeedStoryboardIdentable.feed)
 
+            navigate(from: controller, to: destinationController, with: .present)
+        } catch {
+            // Error Handling
+        }
     }
 }

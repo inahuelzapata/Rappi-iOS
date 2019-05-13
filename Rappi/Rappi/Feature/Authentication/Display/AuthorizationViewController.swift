@@ -22,10 +22,12 @@ class AuthorizationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        injectDependencies()
+
         do {
             let accountID = try userDefaultsWrapper.getString(forKey: UserDefaultKey.accountID)
 
-            router?.routeToFeed()
+            router?.routeToFeed(accountID: accountID)
         } catch {
             requestTokenAndRedirect { [weak self] in
                 self?.presentSafariForGrant(urlString: $0)
@@ -33,7 +35,7 @@ class AuthorizationViewController: UIViewController {
         }
     }
 
-    func injectComponents() {
+    func injectDependencies() {
         weak var controller = self
 
         router = AuthorizationRouter(controller: controller)

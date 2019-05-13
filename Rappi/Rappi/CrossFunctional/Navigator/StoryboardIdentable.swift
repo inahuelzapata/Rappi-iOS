@@ -11,16 +11,3 @@ import Foundation
 protocol StoryboardIdentable {
     var formattedName: String { get }
 }
-
-enum FeedStoryboardIdentable {
-    case feed
-}
-
-extension FeedStoryboardIdentable: StoryboardIdentable {
-    var formattedName: String {
-        switch self {
-        case .feed:
-            return "Feed"
-        }
-    }
-}

@@ -10,7 +10,13 @@ import Foundation
 import PromiseKit
 import UIKit
 
-class MovieViewController: UIViewController {
+struct MovieDataStorage: DataStorage {
+    let accountID: String
+}
+
+class MovieViewController: StorableBaseController {
+    var store: DataStorage!
+
     @IBOutlet private weak var collectionView: UICollectionView!
 
     let movieProvider: MovieProvidable = MovieProvider(requestProvider: current.requestProvider,

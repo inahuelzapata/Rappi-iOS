@@ -34,7 +34,7 @@
 		2A109CD02288D54D00361798 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CCF2288D54D00361798 /* UserDefaults.swift */; };
 		2A109CD22288EA1000361798 /* MovieProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CD12288EA1000361798 /* MovieProvider.swift */; };
 		2A109CD42288EAD100361798 /* MovieEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CD32288EAD100361798 /* MovieEndpoint.swift */; };
-		2A109CD82288EFB800361798 /* FeedStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A109CD72288EFB800361798 /* FeedStoryboard.storyboard */; };
+		2A109CD82288EFB800361798 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A109CD72288EFB800361798 /* Feed.storyboard */; };
 		2A109CDB2288EFFC00361798 /* AuthorizationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CDA2288EFFC00361798 /* AuthorizationRouter.swift */; };
 		2A109CDF2288F1C000361798 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CDE2288F1C000361798 /* Navigator.swift */; };
 		2A109CE12288F3B400361798 /* StoryboardInitiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CE02288F3B400361798 /* StoryboardInitiable.swift */; };
@@ -44,6 +44,7 @@
 		2A109CE92288F45B00361798 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CE82288F45B00361798 /* DataStorage.swift */; };
 		2A109CEB2288F64F00361798 /* ViewControllerStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CEA2288F64F00361798 /* ViewControllerStorable.swift */; };
 		2A37BB2D22873C3000DF532C /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37BB2C22873C3000DF532C /* Collection+Extension.swift */; };
+		2AC7A43222899115005E64A5 /* FeedStoryboardIdentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC7A43122899115005E64A5 /* FeedStoryboardIdentable.swift */; };
 		2AF147DE22872C7800AF68A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF147DD22872C7800AF68A6 /* AppDelegate.swift */; };
 		2AF147E322872C7800AF68A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF147E122872C7800AF68A6 /* Main.storyboard */; };
 		2AF147E622872C7800AF68A6 /* Rappi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AF147E422872C7800AF68A6 /* Rappi.xcdatamodeld */; };
@@ -108,7 +109,7 @@
 		2A109CCF2288D54D00361798 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		2A109CD12288EA1000361798 /* MovieProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieProvider.swift; sourceTree = "<group>"; };
 		2A109CD32288EAD100361798 /* MovieEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEndpoint.swift; sourceTree = "<group>"; };
-		2A109CD72288EFB800361798 /* FeedStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedStoryboard.storyboard; sourceTree = "<group>"; };
+		2A109CD72288EFB800361798 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		2A109CDA2288EFFC00361798 /* AuthorizationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRouter.swift; sourceTree = "<group>"; };
 		2A109CDE2288F1C000361798 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		2A109CE02288F3B400361798 /* StoryboardInitiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitiable.swift; sourceTree = "<group>"; };
@@ -118,6 +119,7 @@
 		2A109CE82288F45B00361798 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		2A109CEA2288F64F00361798 /* ViewControllerStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStorable.swift; sourceTree = "<group>"; };
 		2A37BB2C22873C3000DF532C /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		2AC7A43122899115005E64A5 /* FeedStoryboardIdentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoryboardIdentable.swift; sourceTree = "<group>"; };
 		2AF147DA22872C7800AF68A6 /* Rappi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rappi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF147DD22872C7800AF68A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AF147E222872C7800AF68A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -421,7 +423,8 @@
 		2A109CD62288EFA600361798 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2A109CD72288EFB800361798 /* FeedStoryboard.storyboard */,
+				2A109CD72288EFB800361798 /* Feed.storyboard */,
+				2AC7A43122899115005E64A5 /* FeedStoryboardIdentable.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -805,7 +808,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AF147EB22872C7A00AF68A6 /* LaunchScreen.storyboard in Resources */,
-				2A109CD82288EFB800361798 /* FeedStoryboard.storyboard in Resources */,
+				2A109CD82288EFB800361798 /* Feed.storyboard in Resources */,
 				2AF147E822872C7A00AF68A6 /* Assets.xcassets in Resources */,
 				2AF147E322872C7800AF68A6 /* Main.storyboard in Resources */,
 			);
@@ -921,6 +924,7 @@
 				2A109CCA2288C9B400361798 /* AuthorizationViewController.swift in Sources */,
 				2A109CBE2288BCAA00361798 /* RequestTokenResponse.swift in Sources */,
 				2AF1482C228894B200AF68A6 /* HTTPMethodAdapter.swift in Sources */,
+				2AC7A43222899115005E64A5 /* FeedStoryboardIdentable.swift in Sources */,
 				2AF147E622872C7800AF68A6 /* Rappi.xcdatamodeld in Sources */,
 				2A37BB2D22873C3000DF532C /* Collection+Extension.swift in Sources */,
 				2A109CDF2288F1C000361798 /* Navigator.swift in Sources */,
