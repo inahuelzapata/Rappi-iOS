@@ -32,6 +32,17 @@
 		2A109CCA2288C9B400361798 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CC92288C9B400361798 /* AuthorizationViewController.swift */; };
 		2A109CCD2288D46100361798 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CCC2288D46100361798 /* Account.swift */; };
 		2A109CD02288D54D00361798 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CCF2288D54D00361798 /* UserDefaults.swift */; };
+		2A109CD22288EA1000361798 /* MovieProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CD12288EA1000361798 /* MovieProvider.swift */; };
+		2A109CD42288EAD100361798 /* MovieEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CD32288EAD100361798 /* MovieEndpoint.swift */; };
+		2A109CD82288EFB800361798 /* FeedStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A109CD72288EFB800361798 /* FeedStoryboard.storyboard */; };
+		2A109CDB2288EFFC00361798 /* AuthorizationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CDA2288EFFC00361798 /* AuthorizationRouter.swift */; };
+		2A109CDF2288F1C000361798 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CDE2288F1C000361798 /* Navigator.swift */; };
+		2A109CE12288F3B400361798 /* StoryboardInitiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CE02288F3B400361798 /* StoryboardInitiable.swift */; };
+		2A109CE32288F3CE00361798 /* NavigationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CE22288F3CE00361798 /* NavigationStrategy.swift */; };
+		2A109CE52288F3D800361798 /* StoryboardIdentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CE42288F3D800361798 /* StoryboardIdentable.swift */; };
+		2A109CE72288F3E200361798 /* ViewControllerIdentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CE62288F3E200361798 /* ViewControllerIdentable.swift */; };
+		2A109CE92288F45B00361798 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CE82288F45B00361798 /* DataStorage.swift */; };
+		2A109CEB2288F64F00361798 /* ViewControllerStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CEA2288F64F00361798 /* ViewControllerStorable.swift */; };
 		2A37BB2D22873C3000DF532C /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37BB2C22873C3000DF532C /* Collection+Extension.swift */; };
 		2AF147DE22872C7800AF68A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF147DD22872C7800AF68A6 /* AppDelegate.swift */; };
 		2AF147E322872C7800AF68A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF147E122872C7800AF68A6 /* Main.storyboard */; };
@@ -95,6 +106,17 @@
 		2A109CC92288C9B400361798 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		2A109CCC2288D46100361798 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		2A109CCF2288D54D00361798 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		2A109CD12288EA1000361798 /* MovieProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieProvider.swift; sourceTree = "<group>"; };
+		2A109CD32288EAD100361798 /* MovieEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEndpoint.swift; sourceTree = "<group>"; };
+		2A109CD72288EFB800361798 /* FeedStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedStoryboard.storyboard; sourceTree = "<group>"; };
+		2A109CDA2288EFFC00361798 /* AuthorizationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRouter.swift; sourceTree = "<group>"; };
+		2A109CDE2288F1C000361798 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		2A109CE02288F3B400361798 /* StoryboardInitiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitiable.swift; sourceTree = "<group>"; };
+		2A109CE22288F3CE00361798 /* NavigationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStrategy.swift; sourceTree = "<group>"; };
+		2A109CE42288F3D800361798 /* StoryboardIdentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentable.swift; sourceTree = "<group>"; };
+		2A109CE62288F3E200361798 /* ViewControllerIdentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerIdentable.swift; sourceTree = "<group>"; };
+		2A109CE82288F45B00361798 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		2A109CEA2288F64F00361798 /* ViewControllerStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStorable.swift; sourceTree = "<group>"; };
 		2A37BB2C22873C3000DF532C /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		2AF147DA22872C7800AF68A6 /* Rappi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rappi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF147DD22872C7800AF68A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -218,6 +240,7 @@
 		2A109C9A2288A17600361798 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				2A109CD12288EA1000361798 /* MovieProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -225,6 +248,7 @@
 		2A109C9B2288A18900361798 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				2A109CD32288EAD100361798 /* MovieEndpoint.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -384,6 +408,54 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		2A109CD52288EF9700361798 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				2A109CD62288EFA600361798 /* View */,
+				2A109C992288A16C00361798 /* Movie */,
+				2A109CA02288A77700361798 /* Serie */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		2A109CD62288EFA600361798 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2A109CD72288EFB800361798 /* FeedStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A109CD92288EFEB00361798 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2A109CDA2288EFFC00361798 /* AuthorizationRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2A109CDC2288F00F00361798 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				2A109CC92288C9B400361798 /* AuthorizationViewController.swift */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		2A109CDD2288F1B000361798 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				2A109CE22288F3CE00361798 /* NavigationStrategy.swift */,
+				2A109CDE2288F1C000361798 /* Navigator.swift */,
+				2A109CE42288F3D800361798 /* StoryboardIdentable.swift */,
+				2A109CE02288F3B400361798 /* StoryboardInitiable.swift */,
+				2A109CE62288F3E200361798 /* ViewControllerIdentable.swift */,
+				2A109CE82288F45B00361798 /* DataStorage.swift */,
+				2A109CEA2288F64F00361798 /* ViewControllerStorable.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
 		2AF147D122872C7800AF68A6 = {
 			isa = PBXGroup;
 			children = (
@@ -442,12 +514,13 @@
 		2AF148022287317C00AF68A6 /* CrossFunctional */ = {
 			isa = PBXGroup;
 			children = (
-				2A109CCE2288D52700361798 /* UserDefaults */,
 				2A109CC62288C03300361798 /* Current */,
 				2AF1481A2287395400AF68A6 /* Environment */,
 				2AF148182287394600AF68A6 /* Extensions */,
+				2A109CDD2288F1B000361798 /* Navigator */,
 				2A109C9622889C2100361798 /* OSLog */,
 				2A109CA82288AE3900361798 /* UI */,
+				2A109CCE2288D52700361798 /* UserDefaults */,
 			);
 			path = CrossFunctional;
 			sourceTree = "<group>";
@@ -474,8 +547,7 @@
 		2AF14806228731D000AF68A6 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				2A109CA02288A77700361798 /* Serie */,
-				2A109C992288A16C00361798 /* Movie */,
+				2A109CD52288EF9700361798 /* Feed */,
 				2AF1482522873CE600AF68A6 /* Authentication */,
 			);
 			path = Feature;
@@ -594,10 +666,11 @@
 		2AF1482522873CE600AF68A6 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				2A109CDC2288F00F00361798 /* Display */,
+				2A109CD92288EFEB00361798 /* Router */,
 				2A109CB42288BC4700361798 /* DTO */,
 				2A109CAC2288AF0B00361798 /* Provider */,
 				2AF1482822873F7200AF68A6 /* AuthenticationEndpoint.swift */,
-				2A109CC92288C9B400361798 /* AuthorizationViewController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -732,6 +805,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AF147EB22872C7A00AF68A6 /* LaunchScreen.storyboard in Resources */,
+				2A109CD82288EFB800361798 /* FeedStoryboard.storyboard in Resources */,
 				2AF147E822872C7A00AF68A6 /* Assets.xcassets in Resources */,
 				2AF147E322872C7800AF68A6 /* Main.storyboard in Resources */,
 			);
@@ -849,6 +923,7 @@
 				2AF1482C228894B200AF68A6 /* HTTPMethodAdapter.swift in Sources */,
 				2AF147E622872C7800AF68A6 /* Rappi.xcdatamodeld in Sources */,
 				2A37BB2D22873C3000DF532C /* Collection+Extension.swift in Sources */,
+				2A109CDF2288F1C000361798 /* Navigator.swift in Sources */,
 				2A109CAF2288AF4C00361798 /* RequestProvider.swift in Sources */,
 				2AF148172287392700AF68A6 /* CommonError.swift in Sources */,
 				2AF14834228896C200AF68A6 /* HTTPRequestBuilder.swift in Sources */,
@@ -859,25 +934,32 @@
 				2A109C90228899DB00361798 /* JSONResponse.swift in Sources */,
 				2AF1480B2287327E00AF68A6 /* Endpoint.swift in Sources */,
 				2A109C892288991400361798 /* ResponseParser.swift in Sources */,
+				2A109CEB2288F64F00361798 /* ViewControllerStorable.swift in Sources */,
 				2A109CB82288BC6500361798 /* AccessTokenRequest.swift in Sources */,
 				2A109CB12288B06600361798 /* RequestTokenProvider.swift in Sources */,
+				2A109CE32288F3CE00361798 /* NavigationStrategy.swift in Sources */,
 				2A109CAB2288AE5A00361798 /* LargeTitlesNavigation.swift in Sources */,
 				2A109C8E228899CC00361798 /* NetworkingError.swift in Sources */,
 				2A109C8C2288996300361798 /* AlamofireResponseParser.swift in Sources */,
 				2AF1480D2287338200AF68A6 /* Movie.swift in Sources */,
+				2A109CE72288F3E200361798 /* ViewControllerIdentable.swift in Sources */,
 				2AF1481E228739BC00AF68A6 /* Environment.swift in Sources */,
 				2AF14814228734B400AF68A6 /* ResponseResult.swift in Sources */,
 				2AF147DE22872C7800AF68A6 /* AppDelegate.swift in Sources */,
+				2A109CD22288EA1000361798 /* MovieProvider.swift in Sources */,
+				2A109CDB2288EFFC00361798 /* AuthorizationRouter.swift in Sources */,
 				2AF1481C2287396A00AF68A6 /* JSONDecoder+Extension.swift in Sources */,
 				2A109CCD2288D46100361798 /* Account.swift in Sources */,
 				2A109C9F2288A1B400361798 /* MovieViewController.swift in Sources */,
 				2A109CC82288C03F00361798 /* Current.swift in Sources */,
 				2A109C9822889C2C00361798 /* OSLog.swift in Sources */,
+				2A109CE12288F3B400361798 /* StoryboardInitiable.swift in Sources */,
 				2A109CC52288BED200361798 /* AccessTokenProvider.swift in Sources */,
 				2AF14831228895DE00AF68A6 /* HTTPRequestable.swift in Sources */,
 				2AF14811228733F700AF68A6 /* Serie.swift in Sources */,
 				2AF1482322873B0C00AF68A6 /* HeaderComposer.swift in Sources */,
 				2A109C9522889B0F00361798 /* Data+EncodeDict.swift in Sources */,
+				2A109CD42288EAD100361798 /* MovieEndpoint.swift in Sources */,
 				2AF14839228897B200AF68A6 /* AlamofireRequestExecutor.swift in Sources */,
 				2A109CBA2288BC7300361798 /* AccessTokenResponse.swift in Sources */,
 				2A109CD02288D54D00361798 /* UserDefaults.swift in Sources */,
@@ -885,7 +967,9 @@
 				2AF1483B2288986300AF68A6 /* Mockable.swift in Sources */,
 				2A109CBC2288BC9D00361798 /* RequestTokenRequest.swift in Sources */,
 				2A109C9222889A6100361798 /* HTTPResponse.swift in Sources */,
+				2A109CE52288F3D800361798 /* StoryboardIdentable.swift in Sources */,
 				2AF1482122873AE600AF68A6 /* Headable.swift in Sources */,
+				2A109CE92288F45B00361798 /* DataStorage.swift in Sources */,
 				2A109CB32288B2AD00361798 /* ContentType.swift in Sources */,
 				2A109CC32288BDE300361798 /* Encodable+ToDict.swift in Sources */,
 			);

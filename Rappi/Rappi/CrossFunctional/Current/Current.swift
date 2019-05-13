@@ -19,7 +19,7 @@ struct CurrentEnvironment {
     let requestBuilder: HTTPRequestBuildeable
 }
 
-let currentNetworking: CurrentEnvironment = {
+let current: CurrentEnvironment = {
     let responseParser: ResponseParser = AlamofireResponseParser(decoder: JSONDecoder())
     let requestExecutor: RequestExecutor = AlamofireRequestExecutor(responseParser: responseParser)
     let requestProvider: RequestProvider = PromiseRequestProvider(command: requestExecutor)

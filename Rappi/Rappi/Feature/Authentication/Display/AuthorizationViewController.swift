@@ -11,27 +11,32 @@ import SafariServices
 import UIKit
 
 class AuthorizationViewController: UIViewController {
-    let accessTokenProvider: AccessTokenProvidable = AccessTokenProvider(requestProvider: currentNetworking.requestProvider,
-                                                                         requestBuilder: currentNetworking.requestBuilder)
-    let requestTokenProvider: RequestTokenProvidable = RequestTokenProvider(requestProvider: currentNetworking.requestProvider,
-                                                                            requestBuilder: currentNetworking.requestBuilder)
+    let accessTokenProvider: AccessTokenProvidable = AccessTokenProvider(requestProvider: current.requestProvider,
+                                                                         requestBuilder: current.requestBuilder)
+    let requestTokenProvider: RequestTokenProvidable = RequestTokenProvider(requestProvider: current.requestProvider,
+                                                                            requestBuilder: current.requestBuilder)
     private var requestToken: RequestTokenResponse.RequestToken = RequestTokenResponse.RequestToken("")
     let userDefaultsWrapper: UserDefaultable = UserDefaultWrapper()
+    var router: AuthorizationRoutingLogic?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         do {
-            let sadas = try userDefaultsWrapper.getString(forKey: UserDefaultKey.accountID)
+            let accountID = try userDefaultsWrapper.getString(forKey: UserDefaultKey.accountID)
 
-            print(sadas)
+            router?.routeToFeed()
         } catch {
-
+            requestTokenAndRedirect { [weak self] in
+                self?.presentSafariForGrant(urlString: $0)
+            }
         }
+    }
 
-        requestTokenAndRedirect { [weak self] in
-            self?.presentSafariForGrant(urlString: $0)
-        }
+    func injectComponents() {
+        weak var controller = self
+
+        router = AuthorizationRouter(controller: controller)
     }
 
     func presentSafariForGrant(urlString: String) {
