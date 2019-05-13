@@ -11,7 +11,7 @@ import Foundation
 protocol AuthorizationRoutingLogic: Navigator {
     init(controller: AuthorizationViewController?)
 
-    func routeToFeed(accountID: String)
+    func routeToFeed()
 }
 
 class AuthorizationRouter: AuthorizationRoutingLogic {
@@ -21,7 +21,7 @@ class AuthorizationRouter: AuthorizationRoutingLogic {
         self.controller = controller
     }
 
-    func routeToFeed(accountID: String) {
+    func routeToFeed() {
         do {
             let destinationController = try initStoryboardInitialViewController(with: FeedStoryboardIdentable.feed)
 

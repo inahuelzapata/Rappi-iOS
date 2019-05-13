@@ -27,7 +27,7 @@ class AuthorizationViewController: UIViewController {
         do {
             let accountID = try userDefaultsWrapper.getString(forKey: UserDefaultKey.accountID)
 
-            router?.routeToFeed(accountID: accountID)
+            router?.routeToFeed()
         } catch {
             requestTokenAndRedirect { [weak self] in
                 self?.presentSafariForGrant(urlString: $0)

@@ -39,6 +39,7 @@ class MovieProvider: MovieProvidable {
         return requestBuilder.consume(endpoint: MovieEndpoint.popular)
             .withDecodingStrategy(.convertFromSnakeCase)
             .filter(byParams: request.encodeToDictionary())
+            .withHeaders([Header.authorization(token: Environment().configuration(.accessToken))])
             .build()
     }
 }
