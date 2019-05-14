@@ -34,6 +34,7 @@ class SerieViewController: UIViewController {
         do {
             try serieProvider.execute(request: SerieRequest(page: 1))
                 .done {
+                    print("Results count: \($0.results.count)")
                     self.series = $0.results.map { ShortSerieViewModel(name: $0.name,
                                                                        imagePath: $0.posterPath,
                                                                        rating: $0.popularity) }

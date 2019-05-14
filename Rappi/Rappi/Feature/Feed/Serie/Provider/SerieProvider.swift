@@ -12,6 +12,7 @@ import PromiseKit
 
 struct SerieRequest {
     let page: Int
+    let apiKey = Environment().configuration(.apiKey)
 }
 
 extension SerieRequest: Encodable { }
@@ -38,10 +39,9 @@ class SerieProvider: SerieProvidable {
 
     func buildRequest(basedOn request: SerieRequest) -> HTTPRequestable {
         return requestBuilder.consume(endpoint: SerieEndpoint.popular)
-            .filter(byParams: nil)
+            .filter(byParams: request.encodeToDictionary())
             .withDecodingStrategy(.convertFromSnakeCase)
-            .withHeaders([Header.apiKey(apiKey: Environment().configuration(.apiKey))])
-            .withEncoding(URLEncoding.queryString)
+            .withEncoding(URLEncoding.default)
             .build()
     }
 }

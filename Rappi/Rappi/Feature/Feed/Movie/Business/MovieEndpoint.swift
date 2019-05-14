@@ -29,7 +29,7 @@ enum MovieEndpoint: Endpoint {
     var path: String {
         switch self {
         case .popular:
-            return "/movie/popular"
+            return "/movie/popular" // ?\(apiKeyPath)&page=\(page)"
         case .topRated:
             return "/movie/top_rated"
         case .upcoming:

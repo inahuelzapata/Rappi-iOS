@@ -12,6 +12,7 @@ import PromiseKit
 
 struct MovieRequest {
     let page: Int
+    let apiKey = Environment().configuration(.apiKey)
 }
 
 extension MovieRequest: Encodable { }
@@ -39,8 +40,8 @@ class MovieProvider: MovieProvidable {
     func buildRequest(basedOn request: MovieRequest) -> HTTPRequestable {
         return requestBuilder.consume(endpoint: MovieEndpoint.popular)
             .withDecodingStrategy(.convertFromSnakeCase)
-            .withHeaders([Header.apiKey(apiKey: Environment().configuration(.apiKey))])
-            .withEncoding(URLEncoding.queryString)
+            .filter(byParams: request.encodeToDictionary())
+            .withEncoding(URLEncoding.default)
             .build()
     }
 }
