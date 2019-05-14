@@ -9,19 +9,29 @@
 import Foundation
 
 enum SerieEndpoint: Endpoint {
-    case discover
+    case popular
+    case topRated
 
     var httpMethod: HTTPSMethod {
         switch self {
-        case .discover:
+        case .popular:
+            return .get
+
+        case .topRated:
             return .get
         }
     }
 
     var path: String {
         switch self {
-        case .discover:
+        case .popular:
             return "/tv/popular"
+        case .topRated:
+            return "/tv/top_rated"
         }
+    }
+
+    var baseURL: String {
+        return Environment().configuration(.serverURLv3)
     }
 }

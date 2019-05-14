@@ -16,6 +16,7 @@ enum Header {
     case contentType(type: ContentType)
     case authentication(token: String)
     case authorization(token: String)
+    case apiKey(apiKey: String)
 }
 
 extension Header: Headable {
@@ -29,6 +30,9 @@ extension Header: Headable {
 
         case .authorization(let token):
             return ["Authorization": "Bearer \(token)"]
+
+        case .apiKey(let apiKey):
+            return ["api_key": apiKey]
         }
     }
 }

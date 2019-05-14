@@ -12,20 +12,22 @@ import Tagged
 struct Movie {
     typealias ID = Tagged<Movie, Int>
 
-    let id: ID
-    let voteAverage: Double
-    let originalTitle: String
+    let posterPath: String?
     let adult: Bool
-    let popularity: Double
-    let posterPath: String
-    let title: String
     let overview: String
-    let originalLanguage: String
-    let voteCount: Int
     let releaseDate: String
-    let video: Bool
-
     let genreIds: [Int]
+
+    let id: ID
+    let originalTitle: String
+    let originalLanguage: String
+    let title: String
+
+    let popularity: Double
+
+    let voteCount: Int
+    let video: Bool
+    let voteAverage: Double
 }
 
 extension Movie: Decodable { }

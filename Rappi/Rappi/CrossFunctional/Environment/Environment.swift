@@ -35,6 +35,8 @@ struct Environment {
 enum PlistKey {
     case serverURL
     case accessToken
+    case serverURLv3
+    case apiKey
 
     var value: String {
         switch self {
@@ -42,6 +44,10 @@ enum PlistKey {
             return "AccessToken"
         case .serverURL:
             return "BaseURL"
+        case .serverURLv3:
+            return "BaseURLv3"
+        case .apiKey:
+            return "APIKey"
         }
     }
 }

@@ -6,6 +6,7 @@
 //  Copyright © 2019 iNahuelZapata. All rights reserved.
 //
 
+import Alamofire
 import Foundation
 import PromiseKit
 
@@ -36,10 +37,11 @@ class SerieProvider: SerieProvidable {
     }
 
     func buildRequest(basedOn request: SerieRequest) -> HTTPRequestable {
-        return requestBuilder.consume(endpoint: SerieEndpoint.discover)
-            .filter(byParams: request.encodeToDictionary())
+        return requestBuilder.consume(endpoint: SerieEndpoint.popular)
+            .filter(byParams: nil)
             .withDecodingStrategy(.convertFromSnakeCase)
-            .withHeaders([Header.authorization(token: Environment().configuration(.accessToken))])
+            .withHeaders([Header.apiKey(apiKey: Environment().configuration(.apiKey))])
+            .withEncoding(URLEncoding.queryString)
             .build()
     }
 }

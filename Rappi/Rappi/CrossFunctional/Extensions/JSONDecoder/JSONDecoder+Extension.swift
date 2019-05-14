@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension JSONDecoder {
+extension JSONDecoder {
     func decode<T: Decodable>(_ type: T.Type,
                               withJSONObject object: Any,
                               options opt: JSONSerialization.WritingOptions = .prettyPrinted) throws -> T {

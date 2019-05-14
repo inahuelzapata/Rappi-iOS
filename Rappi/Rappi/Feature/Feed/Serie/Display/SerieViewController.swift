@@ -37,8 +37,9 @@ class SerieViewController: UIViewController {
                     self.series = $0.results.map { ShortSerieViewModel(name: $0.name,
                                                                        imagePath: $0.posterPath,
                                                                        rating: $0.popularity) }
-                }.catch { _ in
+                }.catch { error in
                     print("❌")
+                    print("\(error.localizedDescription)")
             }
         } catch {
             // Add Error Handling

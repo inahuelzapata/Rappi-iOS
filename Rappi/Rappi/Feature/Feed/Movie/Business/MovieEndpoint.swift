@@ -10,10 +10,18 @@ import Foundation
 
 enum MovieEndpoint: Endpoint {
     case popular
+    case topRated
+    case upcoming
 
     var httpMethod: HTTPSMethod {
         switch self {
         case .popular:
+            return .get
+
+        case .topRated:
+            return .get
+
+        case .upcoming:
             return .get
         }
     }
@@ -21,7 +29,15 @@ enum MovieEndpoint: Endpoint {
     var path: String {
         switch self {
         case .popular:
-            return "/discover/movie"
+            return "/movie/popular"
+        case .topRated:
+            return "/movie/top_rated"
+        case .upcoming:
+            return "/movie/upcoming"
         }
+    }
+
+    var baseURL: String {
+        return Environment().configuration(.serverURLv3)
     }
 }

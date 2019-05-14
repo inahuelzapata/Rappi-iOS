@@ -6,6 +6,7 @@
 //  Copyright © 2019 iNahuelZapata. All rights reserved.
 //
 
+import Alamofire
 import Foundation
 import PromiseKit
 
@@ -38,8 +39,8 @@ class MovieProvider: MovieProvidable {
     func buildRequest(basedOn request: MovieRequest) -> HTTPRequestable {
         return requestBuilder.consume(endpoint: MovieEndpoint.popular)
             .withDecodingStrategy(.convertFromSnakeCase)
-            .filter(byParams: request.encodeToDictionary())
-            .withHeaders([Header.authorization(token: Environment().configuration(.accessToken))])
+            .withHeaders([Header.apiKey(apiKey: Environment().configuration(.apiKey))])
+            .withEncoding(URLEncoding.queryString)
             .build()
     }
 }

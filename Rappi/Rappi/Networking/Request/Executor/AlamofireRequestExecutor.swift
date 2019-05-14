@@ -43,11 +43,10 @@ class AlamofireRequestExecutor: RequestExecutor, HeaderComposer {
         case .real:
             return Promise<T> { seal in
                 sessionManager.request(request.endpoint.builtURL,
-                                       method: request.endpoint.httpMethod.method,
-                                       parameters: request.params,
-                                       encoding: JSONEncoding.default,
-                                       headers: compose(headers: request.headers))
-                    .validate()
+                                  method: request.endpoint.httpMethod.method,
+                                  parameters: request.params,
+                                  encoding: request.encoding,
+                                  headers: compose(headers: request.headers))
                     .responseJSON { response in
                         do {
                             let parsedResponse = try

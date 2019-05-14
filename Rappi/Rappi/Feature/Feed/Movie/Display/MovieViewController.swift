@@ -40,7 +40,7 @@ class MovieViewController: StorableBaseController {
                     print(($0.results.count))
 
                     self.movies = $0.results.map { ShortMovieViewModel(title: $0.title,
-                                                                       imagePath: $0.posterPath,
+                                                                       imagePath: $0.posterPath ?? String(), // FIXME
                                                                        rating: $0.popularity) }
             }
         } catch { }
