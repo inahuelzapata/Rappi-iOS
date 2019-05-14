@@ -22,6 +22,8 @@ class MovieViewController: StorableBaseController {
     let movieProvider: MovieProvidable = MovieProvider(requestProvider: current.requestProvider,
                                                        requestBuilder: current.requestBuilder)
 
+    var movies: [ShortMovieViewModel] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,11 +35,22 @@ class MovieViewController: StorableBaseController {
 
     func retrieveMovies() {
         do {
-            try movieProvider.execute(request: MovieRequest(page: 1)).done {
-                print(($0.results.count))
+            try movieProvider.execute(request: MovieRequest(page: 1))
+                .done {
+                    print(($0.results.count))
+
+                    self.movies = $0.results.map { ShortMovieViewModel(title: $0.title,
+                                                                       imagePath: $0.posterPath,
+                                                                       rating: $0.popularity) }
             }
         } catch { }
     }
 }
 
 extension MovieViewController: LargeTitlesNavigation { }
+
+struct ShortMovieViewModel {
+    let title: String
+    let imagePath: String
+    let rating: Double
+}

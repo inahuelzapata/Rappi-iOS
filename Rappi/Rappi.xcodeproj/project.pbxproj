@@ -44,6 +44,8 @@
 		2A109CE92288F45B00361798 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CE82288F45B00361798 /* DataStorage.swift */; };
 		2A109CEB2288F64F00361798 /* ViewControllerStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109CEA2288F64F00361798 /* ViewControllerStorable.swift */; };
 		2A37BB2D22873C3000DF532C /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37BB2C22873C3000DF532C /* Collection+Extension.swift */; };
+		2AAADFFB228A367C009DEE15 /* SerieEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAADFFA228A367C009DEE15 /* SerieEndpoint.swift */; };
+		2AAADFFD228A36FE009DEE15 /* SerieProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAADFFC228A36FE009DEE15 /* SerieProvider.swift */; };
 		2AC7A43222899115005E64A5 /* FeedStoryboardIdentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC7A43122899115005E64A5 /* FeedStoryboardIdentable.swift */; };
 		2AF147DE22872C7800AF68A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF147DD22872C7800AF68A6 /* AppDelegate.swift */; };
 		2AF147E322872C7800AF68A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF147E122872C7800AF68A6 /* Main.storyboard */; };
@@ -119,6 +121,8 @@
 		2A109CE82288F45B00361798 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		2A109CEA2288F64F00361798 /* ViewControllerStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStorable.swift; sourceTree = "<group>"; };
 		2A37BB2C22873C3000DF532C /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		2AAADFFA228A367C009DEE15 /* SerieEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieEndpoint.swift; sourceTree = "<group>"; };
+		2AAADFFC228A36FE009DEE15 /* SerieProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieProvider.swift; sourceTree = "<group>"; };
 		2AC7A43122899115005E64A5 /* FeedStoryboardIdentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoryboardIdentable.swift; sourceTree = "<group>"; };
 		2AF147DA22872C7800AF68A6 /* Rappi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rappi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF147DD22872C7800AF68A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -307,6 +311,7 @@
 		2A109CA42288A7A200361798 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				2AAADFFC228A36FE009DEE15 /* SerieProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 		2A109CA52288A7A700361798 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				2AAADFFA228A367C009DEE15 /* SerieEndpoint.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -968,10 +974,12 @@
 				2A109CBA2288BC7300361798 /* AccessTokenResponse.swift in Sources */,
 				2A109CD02288D54D00361798 /* UserDefaults.swift in Sources */,
 				2AF148372288979600AF68A6 /* RequestExecutor.swift in Sources */,
+				2AAADFFB228A367C009DEE15 /* SerieEndpoint.swift in Sources */,
 				2AF1483B2288986300AF68A6 /* Mockable.swift in Sources */,
 				2A109CBC2288BC9D00361798 /* RequestTokenRequest.swift in Sources */,
 				2A109C9222889A6100361798 /* HTTPResponse.swift in Sources */,
 				2A109CE52288F3D800361798 /* StoryboardIdentable.swift in Sources */,
+				2AAADFFD228A36FE009DEE15 /* SerieProvider.swift in Sources */,
 				2AF1482122873AE600AF68A6 /* Headable.swift in Sources */,
 				2A109CE92288F45B00361798 /* DataStorage.swift in Sources */,
 				2A109CB32288B2AD00361798 /* ContentType.swift in Sources */,

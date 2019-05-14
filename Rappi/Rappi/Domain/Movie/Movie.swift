@@ -7,13 +7,25 @@
 //
 
 import Foundation
+import Tagged
 
-struct Movie { }
+struct Movie {
+    typealias ID = Tagged<Movie, Int>
 
-extension Movie {
-    static let endgame: Movie = { return Movie() }()
-    static let infinityWar: Movie = { return Movie() }()
-    static let captainAmerica: Movie = { return Movie() }()
+    let id: ID
+    let voteAverage: Double
+    let originalTitle: String
+    let adult: Bool
+    let popularity: Double
+    let posterPath: String
+    let title: String
+    let overview: String
+    let originalLanguage: String
+    let voteCount: Int
+    let releaseDate: String
+    let video: Bool
+
+    let genreIds: [Int]
 }
 
 extension Movie: Decodable { }

@@ -7,13 +7,26 @@
 //
 
 import Foundation
+import Tagged
 
-struct Serie { }
+struct Serie {
+    typealias ID = Tagged<Serie, Int>
 
-extension Serie {
-    static let dexter: Serie = { return Serie() }()
-    static let gameOfThrones: Serie = { return Serie() }()
-    static let narcos: Serie = { return Serie() }()
+    let id: ID
+    let voteAverage: Double
+    let originalName: String
+    let adult: Bool
+    let popularity: Double
+    let posterPath: String
+    let name: String
+    let overview: String
+    let originalLanguage: String
+    let voteCount: Int
+    let releaseDate: String
+    let video: Bool
+
+    let genreIds: [Int]
+    let originCountry: [Int]
 }
 
 extension Serie: Decodable { }
