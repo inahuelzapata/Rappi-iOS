@@ -19,8 +19,12 @@ class MovieViewController: StorableBaseController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
 
-    let movieProvider: MovieProvidable = MovieProvider(requestProvider: current.requestProvider,
-                                                       requestBuilder: current.requestBuilder)
+    let moviesExposer: MovieExposer = MoviesExposer(popularProvider: PopularMovieProvider(requestProvider: current.requestProvider,
+                                                                                          requestBuilder: current.requestBuilder),
+                                                    topRatedProvider: TopRatedMovieProvider(requestProvider: current.requestProvider,
+                                                                                            requestBuilder: current.requestBuilder),
+                                                    upcomingProvider: UpcomingMovieProvider(requestProvider: current.requestProvider,
+                                                                                            requestBuilder: current.requestBuilder))
 
     var movies: [ShortMovieViewModel] = []
 
@@ -28,22 +32,32 @@ class MovieViewController: StorableBaseController {
         super.viewDidLoad()
 
         renderLargeNavigation()
-        view.showAnimatedGradientSkeleton()
 
         retrieveMovies()
     }
 
     func retrieveMovies() {
-        do {
-            try movieProvider.execute(request: MovieRequest(page: 1))
-                .done {
-                    print(($0.results.count))
+        view.showAnimatedGradientSkeleton()
 
-                    self.movies = $0.results.map { ShortMovieViewModel(title: $0.title,
-                                                                       imagePath: $0.posterPath ?? String(), // FIXME
-                                                                       rating: $0.popularity) }
+        do {
+            try moviesExposer.expose(popularRequest: MovieRequest(page: 1),
+                                     topRatedRequest: MovieRequest(page: 1),
+                                     upcomingRequest: MovieRequest(page: 1))
+                .done { [weak self] rumine in
+                    print("Josha 💎: \(rumine.count)")
+                    let topRated = rumine.filter { $0.category == .topRated }.count
+                    let popular = rumine.filter { $0.category == .popular }.count
+                    let upcoming = rumine.filter { $0.category == .upcoming }.count
+                    print("NO BARATS 💎 TOP 🔝: \(topRated)")
+                    print("Josha 💎 POPULAR 💵 : \(popular)")
+                    print("UPCOMING 📩 : \(upcoming)")
+
+                    self?.view.hideSkeleton()
             }
-        } catch { }
+        } catch {
+            print("❌")
+            self.view.hideSkeleton()
+        }
     }
 }
 
