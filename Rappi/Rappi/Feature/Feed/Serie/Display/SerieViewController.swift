@@ -12,8 +12,10 @@ import UIKit
 
 class SerieViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
-    let serieProvider: SerieProvidable = SerieProvider(requestProvider: current.requestProvider,
-                                                       requestBuilder: current.requestBuilder)
+    let seriesExposer: SerieExposer = SeriesExposer(popularSerieProvider: PopularSerieProvider(requestProvider: current.requestProvider,
+                                                                                               requestBuilder: current.requestBuilder),
+                                                    topRatedSerieProvider: TopRatedSerieProvider(requestProvider: current.requestProvider,
+                                                                                                 requestBuilder: current.requestBuilder))
 
     var series: [ShortSerieViewModel] = []
 
@@ -23,27 +25,26 @@ class SerieViewController: UIViewController {
         renderLargeNavigation()
         view.showAnimatedGradientSkeleton()
 
-        retrieveSeries()
+        retrieveCategorizedSeries()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
 
-    func retrieveSeries() {
+    func retrieveCategorizedSeries() {
         do {
-            try serieProvider.execute(request: SerieRequest(page: 1))
-                .done {
-                    print("Results count: \($0.results.count)")
-                    self.series = $0.results.map { ShortSerieViewModel(name: $0.name,
-                                                                       imagePath: $0.posterPath,
-                                                                       rating: $0.popularity) }
-                }.catch { error in
-                    print("❌")
-                    print("\(error.localizedDescription)")
+            try seriesExposer.expose(popularRequest: SerieRequest(page: 1), topRatedRequest: SerieRequest(page: 1))
+                .done { rumine in
+                    print("Josha 💎: \(rumine.count)")
+                    let topRated = rumine.filter { $0.category == .topRated }.count
+                    let popular = rumine.filter { $0.category == .popular }.count
+
+                    print("NO BARATS 💎 TOP 🔝: \(topRated)")
+                    print("Josha 💎 POPULAR 💵 : \(popular)")
             }
         } catch {
-            // Add Error Handling
+            print("❌")
         }
     }
 }
