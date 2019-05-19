@@ -11,6 +11,6 @@ import Foundation
 struct ShortSerieViewModel {
     let name: String
     let imagePath: String
-    let rating: Double
+    let releaseDate: String
     let category: CategorizedSerie.Category
 }

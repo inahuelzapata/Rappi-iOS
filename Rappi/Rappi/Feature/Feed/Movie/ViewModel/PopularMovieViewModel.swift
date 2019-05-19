@@ -27,11 +27,10 @@ class PopularMovieViewModel: CollectionViewViewModel<MovieCollectionViewCell, Ca
         if grid.columns == 1 {
             return grid.size(for: view, ratio: 1.2)
         }
-        if
-            (view.traitCollection.userInterfaceIdiom == .phone &&
+
+        if (view.traitCollection.userInterfaceIdiom == .phone &&
                 view.traitCollection.verticalSizeClass == .compact) ||
-                view.traitCollection.userInterfaceIdiom == .pad
-        {
+                view.traitCollection.userInterfaceIdiom == .pad {
             return grid.size(for: view, ratio: 1.2, items: 1, gaps: 3)
         }
         return grid.size(for: view, ratio: 1.2, items: 2, gaps: 1)

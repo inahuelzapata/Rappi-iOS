@@ -10,45 +10,30 @@ import Foundation
 import SkeletonView
 import UIKit
 
-class SerieViewController: UIViewController {
-    @IBOutlet private weak var collectionView: UICollectionView!
+class SerieViewController: CollectionViewController {
     let seriesExposer: SerieExposer =
         SeriesExposer(popularSerieProvider: PopularSerieProvider(requestProvider: current.requestProvider,
                                                                  requestBuilder: current.requestBuilder),
                       topRatedSerieProvider: TopRatedSerieProvider(requestProvider: current.requestProvider,
                                                                    requestBuilder: current.requestBuilder))
 
-    var series: [ShortSerieViewModel] = []
+    var series: [CategorizedSerie] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         renderLargeNavigation()
-        renderCollectionView()
         retrieveCategorizedSeries()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-
-    func renderCollectionView() {
-        collectionView.registerReusableNibCell(MovieCollectionViewCell.self,
-                                               forBundle: Bundle(for: MovieCollectionViewCell.self))
+        renderGrid()
     }
 
     func retrieveCategorizedSeries() {
         view.showAnimatedGradientSkeleton()
         do {
             try seriesExposer.expose(popularRequest: SerieRequest(page: 1), topRatedRequest: SerieRequest(page: 1))
-                .done { [weak self] rumine in
-                    print("Josha 💎: \(rumine.count)")
-                    let topRated = rumine.filter { $0.category == .topRated }.count
-                    let popular = rumine.filter { $0.category == .popular }.count
-
-                    print("NO BARATS 💎 TOP 🔝: \(topRated)")
-                    print("Josha 💎 POPULAR 💵 : \(popular)")
-
+                .done { [weak self] series in
+                    self?.series = series
+                    self?.renderGrid()
                     self?.view.hideSkeleton()
                 }.cauterize()
         } catch {
@@ -56,6 +41,44 @@ class SerieViewController: UIViewController {
             view.hideSkeleton()
         }
     }
+
+    func renderGrid() {
+        let grid = Grid(columns: 2, margin: UIEdgeInsets(all: 5))
+
+        let popularSection = CollectionViewSection(items: [createHorizontal(basedOn: series, category: .popular)])
+        popularSection.header = HeaderViewModel(CategorizedMovie.Category.popular.title)
+
+        let topRatedSection = CollectionViewSection(items: [createHorizontal(basedOn: series, category: .topRated)])
+        topRatedSection.header = HeaderViewModel(CategorizedMovie.Category.topRated.title)
+
+        self.source = CollectionViewSource(grid: grid, sections: [popularSection, topRatedSection])
+        self.collectionView.reloadData()
+    }
+
+    func createHorizontal(basedOn series: [CategorizedSerie],
+                          category: CategorizedSerie.Category) -> SerieCollectionViewModel {
+        let items = series
+            .filter { $0.category == category }
+            .map { serie -> HorizontalSerieViewModel in
+                let viewModel = HorizontalSerieViewModel(serie)
+
+                viewModel.delegate = self
+
+                return viewModel
+        }
+
+        let grid = Grid(columns: 2, margin: UIEdgeInsets(all: 8))
+        let section = CollectionViewSection(items: items)
+        let source = CollectionViewSource(grid: grid, sections: [section])
+
+        return SerieCollectionViewModel(source)
+    }
 }
 
 extension SerieViewController: LargeTitlesNavigation { }
+
+extension SerieViewController: SerieViewModelDelegate {
+    func didSelect(serie: CategorizedSerie) {
+        // Skere
+    }
+}

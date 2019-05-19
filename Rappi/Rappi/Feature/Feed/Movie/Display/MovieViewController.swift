@@ -31,7 +31,7 @@ class MovieViewController: CollectionViewController {
 
         renderLargeNavigation()
         retrieveMovies()
-        rendeR()
+        renderGrid()
     }
 
     func retrieveMovies() {
@@ -43,7 +43,7 @@ class MovieViewController: CollectionViewController {
                                      upcomingRequest: MovieRequest(page: 1))
                 .done { [weak self] movies in
                     self?.movies = movies
-                    self?.rendeR()
+                    self?.renderGrid()
                     self?.view.hideSkeleton()
                 }.cauterize()
         } catch {
@@ -52,7 +52,7 @@ class MovieViewController: CollectionViewController {
         }
     }
 
-    func rendeR() {
+    func renderGrid() {
         let grid = Grid(columns: 2, margin: UIEdgeInsets(all: 5))
 
         let popularSection = CollectionViewSection(items: [createHorizontal(basedOn: movies, category: .popular)])
