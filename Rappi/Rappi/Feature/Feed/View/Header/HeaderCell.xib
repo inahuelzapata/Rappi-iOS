@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ba1-nZ-gzc" customClass="HeaderCell" customModule="Rappi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKx-nr-U6B">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4g-3k-l3k">
+                                <rect key="frame" x="16" y="16" width="268" height="32"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66177736125512543" green="0.69087778440887404" blue="0.70786405456852797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="a4g-3k-l3k" firstAttribute="leading" secondItem="gKx-nr-U6B" secondAttribute="leading" constant="16" id="Bd8-f5-VsF"/>
+                            <constraint firstItem="a4g-3k-l3k" firstAttribute="top" secondItem="gKx-nr-U6B" secondAttribute="top" constant="16" id="Gv1-CR-wdf"/>
+                            <constraint firstAttribute="trailing" secondItem="a4g-3k-l3k" secondAttribute="trailing" constant="16" id="Imu-1N-nAs"/>
+                            <constraint firstAttribute="bottom" secondItem="a4g-3k-l3k" secondAttribute="bottom" constant="16" id="Y9C-Ch-ngB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gKx-nr-U6B" secondAttribute="trailing" id="9sz-4g-0rT"/>
+                <constraint firstAttribute="bottom" secondItem="gKx-nr-U6B" secondAttribute="bottom" id="Rv8-Xs-Fcd"/>
+                <constraint firstItem="gKx-nr-U6B" firstAttribute="leading" secondItem="Ba1-nZ-gzc" secondAttribute="leading" id="bcl-Et-aAW"/>
+                <constraint firstItem="gKx-nr-U6B" firstAttribute="top" secondItem="Ba1-nZ-gzc" secondAttribute="top" id="rDs-XP-vDU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="gQH-v6-Lf3"/>
+            <size key="customSize" width="396" height="73"/>
+            <connections>
+                <outlet property="textLabel" destination="a4g-3k-l3k" id="O1g-1N-Hpz"/>
+            </connections>
+            <point key="canvasLocation" x="153" y="-114.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -24,4 +24,5 @@ extension TableViewHeader {
 }
 
 extension TableViewHeader: Dequeueable { }
+
 extension TableViewHeader: DequeueableNib { }

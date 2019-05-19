@@ -16,6 +16,10 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NrI-bb-9Gb">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-uR-y8F">
                     <rect key="frame" x="16" y="16" width="288" height="43"/>
                     <constraints>
@@ -30,7 +34,11 @@
             <constraints>
                 <constraint firstItem="lmb-uR-y8F" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="5Kd-vs-ari"/>
                 <constraint firstItem="lmb-uR-y8F" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="9ae-IW-b9I"/>
+                <constraint firstItem="NrI-bb-9Gb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9hL-M4-v89"/>
+                <constraint firstAttribute="bottom" secondItem="NrI-bb-9Gb" secondAttribute="bottom" id="B5O-fu-7hh"/>
                 <constraint firstAttribute="bottom" secondItem="lmb-uR-y8F" secondAttribute="bottom" constant="16" id="KSd-ZC-S9V"/>
+                <constraint firstAttribute="trailing" secondItem="NrI-bb-9Gb" secondAttribute="trailing" id="Lm7-v5-17W"/>
+                <constraint firstItem="NrI-bb-9Gb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="a69-Cg-NtK"/>
                 <constraint firstAttribute="trailing" secondItem="lmb-uR-y8F" secondAttribute="trailing" constant="16" id="mbS-G1-Lh6"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

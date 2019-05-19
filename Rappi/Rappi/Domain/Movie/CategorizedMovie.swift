@@ -13,6 +13,17 @@ struct CategorizedMovie {
         case popular
         case topRated
         case upcoming
+
+        var title: String {
+            switch self {
+            case .popular:
+                return "💎 Popular 💎"
+            case .topRated:
+                return "🔝 Top Rated 🔝"
+            case .upcoming:
+                return "📆 Upcoming 📆"
+            }
+        }
     }
 
     let movie: Movie

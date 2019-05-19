@@ -9,14 +9,13 @@
 import Kingfisher
 import UIKit
 
-class MovieCollectionViewCell: UICollectionViewCell {
+class MovieCollectionViewCell: CollectionViewCell {
     @IBOutlet private weak var previewImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        styleCircleImageView(previewImageView)
         styleBorderView(previewImageView, (2.5, .red))
     }
 }
@@ -39,10 +38,11 @@ extension MovieCollectionViewCell {
             styleBorderView(previewImageView, (2.5, .white))
 
         case .topRated:
+            styleCircleImageView(previewImageView)
             styleBorderView(previewImageView, (2.5, .green))
 
         case .upcoming:
-            styleBorderView(previewImageView, (2.5, .midnightBlue))
+            styleBorderView(previewImageView, (2.5, .yellow))
         }
     }
 }
