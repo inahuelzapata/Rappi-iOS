@@ -55,7 +55,7 @@ class AuthorizationViewController: UIViewController {
                 .done {
                     self.requestToken = $0.requestToken
                     redirect("https://www.themoviedb.org/auth/access?request_token=\($0.requestToken.rawValue)")
-            }
+                }.cauterize()
         } catch {
             // Show Error popUp
         }
@@ -67,7 +67,7 @@ class AuthorizationViewController: UIViewController {
                 .done {
                     self.userDefaultsWrapper.saveString(value: $0.accountId.rawValue,
                                                         forKey: UserDefaultKey.accountID)
-            }
+                }.cauterize()
         } catch {
             // Show Error popUp
         }

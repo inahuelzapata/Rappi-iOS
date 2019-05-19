@@ -14,17 +14,16 @@ struct MovieDataStorage: DataStorage {
     let accountID: String
 }
 
-class MovieViewController: StorableBaseController {
-    var store: DataStorage!
-
+class MovieViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
 
-    let moviesExposer: MovieExposer = MoviesExposer(popularProvider: PopularMovieProvider(requestProvider: current.requestProvider,
-                                                                                          requestBuilder: current.requestBuilder),
-                                                    topRatedProvider: TopRatedMovieProvider(requestProvider: current.requestProvider,
-                                                                                            requestBuilder: current.requestBuilder),
-                                                    upcomingProvider: UpcomingMovieProvider(requestProvider: current.requestProvider,
-                                                                                            requestBuilder: current.requestBuilder))
+    let moviesExposer: MovieExposer =
+        MoviesExposer(popularProvider: PopularMovieProvider(requestProvider: current.requestProvider,
+                                                            requestBuilder: current.requestBuilder),
+                      topRatedProvider: TopRatedMovieProvider(requestProvider: current.requestProvider,
+                                                              requestBuilder: current.requestBuilder),
+                      upcomingProvider: UpcomingMovieProvider(requestProvider: current.requestProvider,
+                                                              requestBuilder: current.requestBuilder))
 
     var movies: [ShortMovieViewModel] = []
 
@@ -53,7 +52,7 @@ class MovieViewController: StorableBaseController {
                     print("UPCOMING 📩 : \(upcoming)")
 
                     self?.view.hideSkeleton()
-            }
+                }.cauterize()
         } catch {
             print("❌")
             self.view.hideSkeleton()
