@@ -32,6 +32,8 @@ class MovieViewController: UIViewController {
         }
     }
 
+    var sections: [MovieCollectionViewTypes] = [.popular, .topRated, .upcoming]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,10 +45,16 @@ class MovieViewController: UIViewController {
     func renderCollectionView() {
         collectionView.registerReusableNibCell(MovieCollectionViewCell.self,
                                                forBundle: Bundle(for: MovieCollectionViewCell.self))
+        collectionView.registerReusableNibView(HeaderCollectionReusableView.self,
+                                               kind: UICollectionView.elementKindSectionHeader,
+                                               forBundle: Bundle(for: HeaderCollectionReusableView.self))
 
         collectionView.dataSource = self
+        collectionView.delegate = self
+
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = CGSize(width: 180, height: 180)
+            layout.sectionHeadersPinToVisibleBounds = true
         }
     }
 
@@ -59,9 +67,9 @@ class MovieViewController: UIViewController {
                                      upcomingRequest: MovieRequest(page: 1))
                 .done { [weak self] movies in
                     self?.movies = movies.compactMap { ShortMovieViewModel(title: $0.movie.title,
-                                                                        imagePath: $0.movie.posterPath ?? "",
-                                                                        rating: $0.movie.voteAverage,
-                                                                        category: $0.category) }
+                                                                           imagePath: $0.movie.posterPath ?? "",
+                                                                           rating: $0.movie.voteAverage,
+                                                                           category: $0.category) }
 
                     self?.view.hideSkeleton()
                     self?.collectionView.reloadData()
@@ -82,7 +90,19 @@ extension MovieViewController: SkeletonCollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movies.count
+        switch section {
+        case 0:
+            return movies.filter { $0.category == .popular }.count
+
+        case 1:
+            return movies.filter { $0.category == .topRated }.count
+
+        case 2:
+            return movies.filter { $0.category == .upcoming }.count
+
+        default:
+            return 0
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -94,8 +114,68 @@ extension MovieViewController: SkeletonCollectionViewDataSource {
         return cell
     }
 
-    func numSections(in collectionSkeletonView: UICollectionView) -> Int {
-        return 3
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return sections.count
+    }
+}
+
+extension MovieViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 180, height: 180)
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.bounds.size.width, height: 64)
+    }
+}
+
+extension MovieViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionHeader else {
+            return UICollectionReusableView()
+        }
+
+        let header: HeaderCollectionReusableView = collectionView.dequeueReusableView(for: indexPath, ofKind: kind)
+
+        switch indexPath.section {
+        case 0:
+            header.renderTitle("Popular 🥇")
+
+        case 1:
+            header.renderTitle("Top Rated 🔝")
+
+        case 2:
+            header.renderTitle("Upcoming Movies 📆")
+
+        default:
+            return UICollectionReusableView()
+        }
+
+        return header
     }
 }
 

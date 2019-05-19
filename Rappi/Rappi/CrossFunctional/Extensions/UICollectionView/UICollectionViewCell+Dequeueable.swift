@@ -12,3 +12,7 @@ import UIKit
 extension UICollectionViewCell: Dequeueable { }
 
 extension UICollectionViewCell: DequeueableNib { }
+
+extension UICollectionReusableView: Dequeueable { }
+
+extension UICollectionReusableView: DequeueableNib { }
