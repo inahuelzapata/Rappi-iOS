@@ -24,12 +24,17 @@ class SerieViewController: UIViewController {
         super.viewDidLoad()
 
         renderLargeNavigation()
-
+        renderCollectionView()
         retrieveCategorizedSeries()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+
+    func renderCollectionView() {
+        collectionView.registerReusableNibCell(MovieCollectionViewCell.self,
+                                               forBundle: Bundle(for: MovieCollectionViewCell.self))
     }
 
     func retrieveCategorizedSeries() {

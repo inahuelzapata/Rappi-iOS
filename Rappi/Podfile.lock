@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.2)
+  - Kingfisher (5.5.0)
   - PromiseKit (6.8.4):
     - PromiseKit/CorePromise (= 6.8.4)
     - PromiseKit/Foundation (= 6.8.4)
@@ -14,23 +15,26 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 4.8.2)
+  - Kingfisher
   - PromiseKit (= 6.8.4)
-  - SkeletonView
+  - SkeletonView (= 1.5)
   - Tagged (~> 0.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Kingfisher
     - PromiseKit
     - SkeletonView
     - Tagged
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
   PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
   SkeletonView: 6cbb80f82f8bdee3f9093e2fa03b84819b4bd826
   Tagged: a6babffe08b180c499a7a422661621bd4f330840
 
-PODFILE CHECKSUM: 69201220a692a34e58d1b388622d15c61dbf8c57
+PODFILE CHECKSUM: 9738ed4369c92e0e3b716faf0f186763f1a8babe
 
 COCOAPODS: 1.5.3

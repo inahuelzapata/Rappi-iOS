@@ -5,6 +5,7 @@ target 'Rappi' do
   pod 'Tagged', '~> 0.4'
   pod 'PromiseKit', '6.8.4'
   pod 'SkeletonView', '1.5'
+  pod 'Kingfisher', '5.5.0'
 
   target 'RappiTests' do
     inherit! :search_paths
