@@ -10,13 +10,6 @@ import Alamofire
 import Foundation
 import PromiseKit
 
-struct SerieRequest {
-    let page: Int
-    let apiKey = Environment().configuration(.apiKey)
-}
-
-extension SerieRequest: Encodable { }
-
 protocol SerieProvidable: AsyncProvider {
     var endpoint: Endpoint { get }
 
@@ -41,66 +34,5 @@ extension SerieProvidable {
             .withDecodingStrategy(.convertFromSnakeCase)
             .withEncoding(URLEncoding.default)
             .build()
-    }
-}
-
-class PopularSerieProvider: SerieProvidable {
-    var endpoint: Endpoint {
-        return SerieEndpoint.popular
-    }
-
-    var requestBuilder: HTTPRequestBuildeable
-
-    var requestProvider: RequestProvider
-
-    required init(requestProvider: RequestProvider, requestBuilder: HTTPRequestBuildeable) {
-        self.requestBuilder = requestBuilder
-        self.requestProvider = requestProvider
-    }
-}
-
-class TopRatedSerieProvider: SerieProvidable {
-    var endpoint: Endpoint {
-        return SerieEndpoint.topRated
-    }
-
-    var requestBuilder: HTTPRequestBuildeable
-
-    var requestProvider: RequestProvider
-
-    required init(requestProvider: RequestProvider, requestBuilder: HTTPRequestBuildeable) {
-        self.requestBuilder = requestBuilder
-        self.requestProvider = requestProvider
-    }
-}
-
-protocol SerieExposer {
-    init(popularSerieProvider: SerieProvidable, topRatedSerieProvider: SerieProvidable)
-
-    func expose(popularRequest: SerieRequest, topRatedRequest: SerieRequest) throws -> Promise<[CategorizedSerie]>
-}
-
-class SeriesExposer: SerieExposer {
-    let popularSerieProvider: SerieProvidable
-    let topRatedSerieProvider: SerieProvidable
-
-    required init(popularSerieProvider: SerieProvidable, topRatedSerieProvider: SerieProvidable) {
-        self.popularSerieProvider = popularSerieProvider
-        self.topRatedSerieProvider = topRatedSerieProvider
-    }
-
-    func expose(popularRequest: SerieRequest, topRatedRequest: SerieRequest) throws -> Promise<[CategorizedSerie]> {
-        return Promise<[CategorizedSerie]> { seal in
-            try when(fulfilled: popularSerieProvider.execute(request: popularRequest),
-                     topRatedSerieProvider.execute(request: topRatedRequest))
-                .done {
-                    let popularSeries = $0.0.results.compactMap { CategorizedSerie(serie: $0, category: .popular) }
-                    let topRatedSeries = $0.1.results.compactMap { CategorizedSerie(serie: $0, category: .topRated) }
-
-                    seal.resolve(.fulfilled(popularSeries + topRatedSeries))
-                }.catch { error in
-                    seal.reject(error)
-            }
-        }
     }
 }

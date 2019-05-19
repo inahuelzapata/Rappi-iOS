@@ -29,13 +29,3 @@ struct Serie {
 }
 
 extension Serie: Decodable { }
-
-struct CategorizedSerie {
-    enum SerieCategory {
-        case popular
-        case topRated
-    }
-
-    let serie: Serie
-    let category: SerieCategory
-}
