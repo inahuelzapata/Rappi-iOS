@@ -87,6 +87,7 @@
 		2A8B33C4229201D20058B478 /* SerieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8B33C3229201D20058B478 /* SerieViewModel.swift */; };
 		2A8B33C7229202780058B478 /* SerieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8B33C6229202780058B478 /* SerieCollectionViewCell.swift */; };
 		2A8B33C92292028D0058B478 /* SerieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A8B33C82292028D0058B478 /* SerieCollectionViewCell.xib */; };
+		2A8B33CE22922E6C0058B478 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8B33CD22922E6C0058B478 /* SearchViewController.swift */; };
 		2AAADFFB228A367C009DEE15 /* SerieEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAADFFA228A367C009DEE15 /* SerieEndpoint.swift */; };
 		2AAADFFD228A36FE009DEE15 /* SerieProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAADFFC228A36FE009DEE15 /* SerieProvider.swift */; };
 		2AC7A43222899115005E64A5 /* FeedStoryboardIdentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC7A43122899115005E64A5 /* FeedStoryboardIdentable.swift */; };
@@ -207,6 +208,7 @@
 		2A8B33C3229201D20058B478 /* SerieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewModel.swift; sourceTree = "<group>"; };
 		2A8B33C6229202780058B478 /* SerieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieCollectionViewCell.swift; sourceTree = "<group>"; };
 		2A8B33C82292028D0058B478 /* SerieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SerieCollectionViewCell.xib; sourceTree = "<group>"; };
+		2A8B33CD22922E6C0058B478 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2AAADFFA228A367C009DEE15 /* SerieEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieEndpoint.swift; sourceTree = "<group>"; };
 		2AAADFFC228A36FE009DEE15 /* SerieProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieProvider.swift; sourceTree = "<group>"; };
 		2AC7A43122899115005E64A5 /* FeedStoryboardIdentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoryboardIdentable.swift; sourceTree = "<group>"; };
@@ -679,6 +681,29 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2A8B33CA22922CAA0058B478 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		2A8B33CB22922E510058B478 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2A8B33CC22922E5C0058B478 /* Display */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		2A8B33CC22922E5C0058B478 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				2A8B33CD22922E6C0058B478 /* SearchViewController.swift */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
 		2AAADFFE228A463C009DEE15 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -716,6 +741,7 @@
 				2AF14805228731C700AF68A6 /* Error */,
 				2AF14806228731D000AF68A6 /* Feature */,
 				2AF148072287326700AF68A6 /* Networking */,
+				2A8B33CA22922CAA0058B478 /* Persistence */,
 				2AF148012287316500AF68A6 /* Resources */,
 			);
 			path = Rappi;
@@ -780,8 +806,9 @@
 		2AF14806228731D000AF68A6 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				2A109CD52288EF9700361798 /* Feed */,
 				2AF1482522873CE600AF68A6 /* Authentication */,
+				2A109CD52288EF9700361798 /* Feed */,
+				2A8B33CB22922E510058B478 /* Search */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -1209,6 +1236,7 @@
 				2A8B33A32291EFF30058B478 /* CollectionViewModel.swift in Sources */,
 				2A8B3361229182050058B478 /* TopRatedSerieProvider.swift in Sources */,
 				2A8B336D229182B50058B478 /* MovieExposer.swift in Sources */,
+				2A8B33CE22922E6C0058B478 /* SearchViewController.swift in Sources */,
 				2AF14814228734B400AF68A6 /* ResponseResult.swift in Sources */,
 				2A8B336F229182E00058B478 /* MovieRequest.swift in Sources */,
 				2A8B336B229182A90058B478 /* UpcomingMovieProvider.swift in Sources */,

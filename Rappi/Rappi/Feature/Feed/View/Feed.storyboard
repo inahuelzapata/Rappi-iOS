@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78R-eh-68a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1758" y="-1327"/>
+            <point key="canvasLocation" x="1713" y="-1373"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="p27-bC-1ta">
@@ -55,6 +55,7 @@
                     <connections>
                         <segue destination="hbp-q3-2PY" kind="relationship" relationship="viewControllers" id="oyq-fu-Y5y"/>
                         <segue destination="khR-4z-aHs" kind="relationship" relationship="viewControllers" id="Yuy-e8-20e"/>
+                        <segue destination="f4D-2L-IyM" kind="relationship" relationship="viewControllers" id="MS2-43-GtY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yg2-u5-p4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -65,7 +66,9 @@
         <scene sceneID="p38-Bd-jty">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hbp-q3-2PY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Movie" selectedImage="Movie" id="vHV-uI-ARg"/>
+                    <tabBarItem key="tabBarItem" title="" image="Movie" selectedImage="Movie" id="vHV-uI-ARg">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="clj-O8-ZPF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -78,13 +81,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKA-2G-mRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="670" y="-1373"/>
+            <point key="canvasLocation" x="803" y="-1373"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pa2-so-gQ0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="khR-4z-aHs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Series" selectedImage="Series" id="Jkt-bA-t1A"/>
+                    <tabBarItem key="tabBarItem" title="" image="Series" selectedImage="Series" id="Jkt-bA-t1A">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kcb-sa-SYH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -99,20 +104,59 @@
             </objects>
             <point key="canvasLocation" x="802.89855072463774" y="-679.01785714285711"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="ahS-XX-aWk">
+        <!--Search-->
+        <scene sceneID="X3f-Mp-vf0">
             <objects>
-                <tabBarController storyboardIdentifier="FeedTabBarController" id="L2e-xt-Cgy" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UnG-lK-7vK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="1" green="0.34223848429999998" blue="0.37644884039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="1" green="0.34223848429999998" blue="0.37644884039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YX5-wZ-7Io" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Zb5-e8-ZKt" customClass="SearchViewController" customModule="Rappi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yCO-Bv-yb1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q1R-mH-yTc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q1R-mH-yTc" firstAttribute="top" secondItem="tck-Rx-elj" secondAttribute="top" id="3Al-T2-utD"/>
+                            <constraint firstItem="tck-Rx-elj" firstAttribute="bottom" secondItem="Q1R-mH-yTc" secondAttribute="bottom" id="6fe-8z-rfB"/>
+                            <constraint firstItem="tck-Rx-elj" firstAttribute="trailing" secondItem="Q1R-mH-yTc" secondAttribute="trailing" id="FDC-Pr-VxJ"/>
+                            <constraint firstItem="Q1R-mH-yTc" firstAttribute="leading" secondItem="tck-Rx-elj" secondAttribute="leading" id="Ixh-mA-5fx"/>
+                            <constraint firstItem="Q1R-mH-yTc" firstAttribute="bottom" secondItem="tck-Rx-elj" secondAttribute="bottom" id="fZ4-SE-UHQ"/>
+                            <constraint firstItem="Q1R-mH-yTc" firstAttribute="top" secondItem="tck-Rx-elj" secondAttribute="top" id="pHR-83-6ZD"/>
+                            <constraint firstItem="Q1R-mH-yTc" firstAttribute="trailing" secondItem="tck-Rx-elj" secondAttribute="trailing" id="tC8-ab-Unv"/>
+                            <constraint firstItem="Q1R-mH-yTc" firstAttribute="leading" secondItem="tck-Rx-elj" secondAttribute="leading" id="yvr-ji-nWZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tck-Rx-elj"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="Ams-pH-CIC"/>
+                    <connections>
+                        <outlet property="searchTableView" destination="Q1R-mH-yTc" id="qbb-Yz-5QY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jnk-Qe-xgq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-697" y="-520"/>
+            <point key="canvasLocation" x="1713" y="78"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="E5E-rd-uqT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f4D-2L-IyM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="QrU-yh-sct"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7cK-94-QKZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zb5-e8-ZKt" kind="relationship" relationship="rootViewController" id="C8F-Vi-bJ5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DFK-of-nHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="78"/>
         </scene>
     </scenes>
     <resources>
